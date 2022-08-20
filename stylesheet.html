@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel='apple-touch-icon' sizes='180x180' href='/media/icons/apple-touch-icon.png'/>
+<link rel='icon' type='image/png' sizes='32x32' href='/media/icons/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/media/icons/favicon-16x16.png' />
+<link rel='manifest' href='/media/icons/site.webmanifest' />
+<link rel='mask-icon' href='/media/icons/safari-pinned-tab.svg' color='#bd93f9' />
+<link rel='shortcut icon' href='/media/icons/favicon.ico' />
+<meta name='msapplication-TileColor' content='#603cba' />
+<meta name='msapplication-config' content='/media/icons/browserconfig.xml' />
+<meta name='theme-color' content='#282A36' />
+<meta charset='UTF-8'>
+<meta name='description' content='Nchrs supports a unique flavor of Markdown.' />
+<meta name='author' content='Zach Manson' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='stylesheet' type='text/css' href='links/main.css' />
+<title>notes: stylesheet</title>
+<meta property='og:title' content='stylesheet' />
+<meta property='og:type' content='website' />
+<meta property='og:description' content='Nchrs supports a unique flavor of Markdown.' />
+<meta property='og:site_name' content='notes' />
+<meta property='og:url' content='https://notes.zachmanson.com//stylesheet.html' />
+</head>
+<body>
+<nav>
+<a href='index.html'><img src='/media/icon/android-chrome-256x256.png' alt='notes' height='100' /></a>
+<ul>
+<li><a href='meta.html' class="active">meta</a></li>
+<li><a href='goals.html'>goals</a></li>
+</ul>
+<ul>
+<li><a href='license.html'>license</a></li>
+<li><a href='stylesheet.html' class="active">stylesheet</a></li>
+</ul>
+<ul>
+</ul>
+</nav>
+<main>
+<h1>Nchrs supports a unique flavor of Markdown.</h1>
+<q>Bicycle means simplicity and simplicity means happiness!</q>
+<cite>Mehmet Murat Ildan</cite>
+<h3>Headings</h3>
+<pre>
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+</pre>
+<h3>Text</h3>
+<pre>
+This is a paragraph.<br />Line breaks need a < br > HTML tag.
+This text is *bold*.
+This text is ~italic~.
+</pre>
+<h3>Lists</h3>
+<pre>
++ List Item 1
++ List Item 2
++ List Item 3
+</pre>
+<h3>Quotes</h3>
+<pre>
+"This a quote."
+- This is a cite.
+</pre>
+<h3>Tables</h3>
+<pre>
+| Column 1 | Column 2 | Column 3 |
+| Column 1 | Column 2 | Column 3 |
+</pre>
+<h3>Code</h3>
+<pre>
+`This is code.`
+> This is a code block.
+</pre>
+<p>Use two `` before and after a multiline text block to create a markdown formated code block.</p>
+<p>Use three ``` before and after a multiline text block to create a code block that ignores markdown.</p>
+<p>Here is an <a href='about.html'>internal link</a>, here is an external link to <a href="https://wiki.xxiivv.com/">XXIIVV</a>.</p>
+<p>This is a file in <code>src/inc/code/</code>:</p>
+<pre>
+#!/bin/bash
+# case example
+case $1 in
+ start)
+  echo starting
+   ;;
+ stop)
+  echo stoping
+   ;;
+ restart)
+  echo restarting
+   ;;
+ *)
+  echo don\'t know
+   ;;
+esac
+</pre>
+<p>This is a file in <code>src/inc/text/</code></p>
+<article>
+<p>Ich gebe dir jetzt und jederzeit meinen Segen.
+<br>Ich vertraue dir und ich bin sicher, dass du auf dem richtigen Weg bist.
+<br>Ich werde im Laufe der Zeit immer wieder klare Grenzen ziehen und sie einhalten.
+<br>Wenn du fällst, helfe ich dir wieder auf.
+<br>Ich werde so lange beschützen, bis du dich selbst beschützen kannst.
+<br>Ich gebe dir die Erlaubnis, so zu sein, wie ich bin, mehr zu sein als ich bin oder weniger zu sein als ich bin, genau so wie es deine Vision von dir verlangt.
+<br>Genau so, wie du bist, segnest mein Leben ohne Unterlass.
+<br>Ich bin so stolz auf dich.
+<br>Ich liebe dich.
+<br>
+<br></p>
+</article>
+<p>This is a file in <code>src/inc/text/gernot_candolini/</code></p>
+<article>
+<p>Es ist Zeit.
+<br>
+<br>Wir sehen dich im Türrahmen stehen,
+<br>aufrecht und schön.
+<br>Du hast die Schwelle überschritten
+<br>zu deiner letzten Reise.
+<br>
+<br>Wir möchten dir unseren Dank sagen
+<br>und uns verneigen vor dir und deinem Leben.
+<br>Wir behalten dich hier im Herzen.
+<br>Es fällt uns schwer, dich gehen zu lassen.
+<br>
+<br>Wir segnen dich ein letztes Mal.
+<br>Wir segnen deine Reise
+<br>und senden dich heim zu Gott.
+<br></p>
+</article>
+<p>This is an image</p>
+<figure>
+<a href='media/knots/knot_reef.jpg'>
+<img srcset='media/knots/knot_reef-240.png 240w, media/knots/knot_reef-680.png 680w, media/knots/knot_reef-900.png 900w' sizes='(max-width: 480px) 240px, 680px' src='media/knots/knot_reef-240.png' alt='' loading='lazy'>
+</a>
+<figcaption>Reef Knot or Kreuzknoten</figcaption>
+</figure>
+<p>Types:</p>
+<ul>
+<li>img_portal</li>
+<li>full_portal</li>
+<li>text_portal</li>
+</ul>
+<p>Cover images for img_portals are directly taken from <code>/media/headers/<name></code></p>
+<p>This is a list:</p>
+<h3>personal wiki links</h3>
+<ul>
+<li><a href='https://thomasorus.com/home.html' target='_blank'>Thomasorus</a></li>
+<li><a href='https://wiki.xxiivv.com/site/home.html' target='_blank'>XXIIVV</a></li>
+</ul>
+<h3>Links</h3><ul>
+<li><a href='https://www.mobileread.com/forums/showthread.php?t=320564' target='_blank'>JailBreak Guide</a></li>
+<li><a href='https://www.gutenberg.org/' target='_blank'>Project Gutenberg</a></li>
+<li><a href='https://libgen.is/' target='_blank'>Library Genesis</a></li>
+</ul></main>
+<footer>
+<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Fri Aug 19 21:14:06 2022
+</em>
+<hr />
+<section>
+<p>Made ineffeciently by <a href='https://zachmanson.com'>Zach Manson</a></p>
+</section>
+</footer>
+</body>
+</html>
