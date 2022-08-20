@@ -1,0 +1,8 @@
+#!/bin/bash
+# This script uses rsync to copy image data files from
+# the camera memory card. The data is copied to the location
+# stored in $to and deleted from its location on the SD card.
+
+from="/media/rostiger/disk/DCIM/"
+to="${HOME}/Pictures/raw"
+rsync -rtvu --remove-source-files --include "*/" --include="*.RAF" --include="*.ARW" --exclude="*" ${from} ${to}

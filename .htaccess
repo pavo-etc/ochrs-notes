@@ -1,0 +1,9 @@
+RewriteEngine on
+# redirect automatically from site/
+RewriteRule ^site/(.*)$ /../$1 [R,NC,L]
+# add .html file extension if necessary
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L]
+# error handling
+ErrorDocument 404 /404.html
