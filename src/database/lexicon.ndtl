@@ -41,7 +41,8 @@ META
 		GIFs are converted the MP4 using `ffmpeg` within the `makeVideo` script.
 		All of the above scripts are executed when the `deploy.sh` is called. Additionally this script deploys the files to the webserver utilising rsync.
 	LINKS
-		source files : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/main.c
+		source files : https://github.com/pavo-etc/notes
+		Nchrs source files : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/main.c
 		batchVariants script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/batchVariants.sh
 		makeVideo script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/makeVideo.sh
 		deploy script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/deploy.sh
