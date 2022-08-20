@@ -797,7 +797,7 @@ fpnav(FILE *f, Term *t)
 	if(!t->parent->parent)
 		error("Missing parent", t->parent->name);
 	fputs("<nav>\n", f);
-	fputs("<a href='index.html'><img src='/media/icon/android-chrome-256x256.png' alt='" NAME "' height='100' /></a>\n", f);
+	fputs("<a href='index.html'><img src='/media/icon/icon.png' alt='" NAME "' height='100' /></a>\n", f);
 	if(t->parent->parent->name == t->parent->name)
 		fpnavsub(f, t->parent->parent, t);
 	else
@@ -905,14 +905,14 @@ fphtml(FILE *f, Glossary *glo, Lexicon *lex, Term *t, Journal *jou)
 	fputs("<head>\n", f);
 	fprintf(
 		f,
-		"<link rel='apple-touch-icon' sizes='180x180' href='/media/icons/apple-touch-icon.png'/>\n"
-		"<link rel='icon' type='image/png' sizes='32x32' href='/media/icons/favicon-32x32.png' />\n"
-		"<link rel='icon' type='image/png' sizes='16x16' href='/media/icons/favicon-16x16.png' />\n"
-		"<link rel='manifest' href='/media/icons/site.webmanifest' />\n"
-		"<link rel='mask-icon' href='/media/icons/safari-pinned-tab.svg' color='#bd93f9' />\n"
-		"<link rel='shortcut icon' href='/media/icons/favicon.ico' />\n"
+		"<link rel='apple-touch-icon' sizes='180x180' href='/media/icon/apple-touch-icon.png'/>\n"
+		"<link rel='icon' type='image/png' sizes='32x32' href='/media/icon/favicon-32x32.png' />\n"
+		"<link rel='icon' type='image/png' sizes='16x16' href='/media/icon/favicon-16x16.png' />\n"
+		"<link rel='manifest' href='/media/icon/site.webmanifest' />\n"
+		"<link rel='mask-icon' href='/media/icon/safari-pinned-tab.svg' color='#bd93f9' />\n"
+		"<link rel='shortcut icon' href='/media/icon/favicon.ico' />\n"
 		"<meta name='msapplication-TileColor' content='#603cba' />\n"
-		"<meta name='msapplication-config' content='/media/icons/browserconfig.xml' />\n"
+		"<meta name='msapplication-config' content='/media/icon/browserconfig.xml' />\n"
 		"<meta name='theme-color' content='#282A36' />\n"
 		"<meta charset='UTF-8'>\n"
 		"<meta name='description' content='%s' />\n"
@@ -993,7 +993,7 @@ fprss(FILE *f, Journal *jou)
 	fputs("</lastBuildDate>\n", f);
 	/* Image */
 	fputs("<image>\n", f);
-	fputs("  <url>https://zachmanson.com/icons/apple-touch-icon.png</url>\n", f);
+	fputs("  <url>https://zachmanson.com/icon/apple-touch-icon.png</url>\n", f);
 	fputs("  <title>Updates and progress on various projects and day to day events.</title>\n", f);
 	fputs("  <link>" DOMAIN "/journal.html</link>\n", f);
 	fputs("</image>\n", f);

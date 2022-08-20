@@ -8,13 +8,13 @@ rm -f ./nchrs
 rm ../site/*.html
 rm ../site/links/*
 
-cp -R links/ ../site/links/
+cp -R links/* ../site/links/
 
 # Linux(debug)
 #cc -std=c89 -DDEBUG -Wall -Wno-unknown-pragmas -Wpedantic -Wshadow -Wuninitialized -Wextra -Werror=implicit-int -Werror=incompatible-pointer-types -Werror=int-conversion -Wvla -g -Og -O0 -fsanitize=address -fsanitize=undefined main.c -o nchrs
 
 # Linux(fast)
-cc main.c -std=c89 -Os -DNDEBUG -g0 -Wall -Wno-comment -Wno-unknown-pragmas -o nchrs
+cc main.c -Os -DNDEBUG -g0 -Wall -Wno-comment -Wno-unknown-pragmas -o nchrs
 
 # RPi
 # tcc -Wall main.c -o oscean

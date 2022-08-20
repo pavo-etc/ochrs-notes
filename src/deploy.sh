@@ -6,3 +6,4 @@ echo "Uploading to webserver..."
 cd ../site/
 git add -A
 git commit -m "gh-pages deployment"
+git push

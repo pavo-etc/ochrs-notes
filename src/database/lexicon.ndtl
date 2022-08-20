@@ -6,7 +6,7 @@ INDEX
 
 PROJECTS
 	HOST : index
-	BREF : Archive ongoing and offgoing projects.
+	BREF : Archive of ongoing and offgoing projects.
 	TYPE : img_portal
 
 ABOUT
@@ -43,9 +43,6 @@ META
 	LINKS
 		source files : https://github.com/pavo-etc/notes
 		Nchrs source files : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/main.c
-		batchVariants script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/batchVariants.sh
-		makeVideo script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/makeVideo.sh
-		deploy script : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/deploy.sh
 		XXIIVV : https://wiki.xxiivv.com/site/about.html
 
 LICENSE
@@ -162,6 +159,13 @@ MERVEILLES MEETUP 01
 		{^img albums/220429_MerveillesMeetup/220501_5124.jpg}
 		{^img albums/220429_MerveillesMeetup/220501_5138.jpg}
 
+SNAKEWARE
+	HOST : development
+	BREF : A Linux-based operating system with a pure Python userspace
+	BODY
+		snakeware is an experimental OS with developed in 2020.  Its userspace is written entirely in Python, barring a single Busybox root process.  It was created by Joshua Moore drawing inspiration from the Commodore 64.  The window manager, snakewm, is written primarily with pygame_gui.
+	LINKS
+		snakeware source code : https://github.com/joshiemoore/snakeware
 
 404
 	HOST : index
