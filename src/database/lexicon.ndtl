@@ -39,7 +39,7 @@ META
 		To build the website, a bash script called `build.sh` needs to be executed. It compiles `main.c`, runs the executable that outputs the content of `databases/lexicon.ndtl` and `databases/glossary.ndtl` to single HTML files and finally removes the executable again. `clang-format` formats the code before compilation.
 		This site supports responsive images and lazyloading to preserve bandwidth. The original images are stored in `src/media/` and are converted to appropriate sizes and dithered by the `batchVariants` bash script using imagemagick.
 		GIFs are converted the MP4 using `ffmpeg` within the `makeVideo` script.
-		All of the above scripts are executed when the `deploy.sh` is called. Additionally this script deploys the files to the webserver utilising rsync.
+		All of the above scripts are executed when the `deploy.sh` is called. Additionally this script pushes the site to the deployed branch.
 	LINKS
 		source files : https://github.com/pavo-etc/notes
 		Nchrs source files : https://git.sr.ht/~rostiger/nchrs/tree/main/item/src/main.c
