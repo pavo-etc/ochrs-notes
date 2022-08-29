@@ -318,7 +318,7 @@ fplist(FILE *f, Glossary *glo, char *target)
 	l->routes++;
 	return 1;
 }
-
+// m1
 int
 fppict(FILE *f, char *filename, char *caption, int header, int link)
 {
@@ -349,11 +349,21 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 		isVideo = 1;
 	char fakepath[1024] = "../site/";
 	scat(fakepath, path);
+
 	img = getfile(fakepath, name, ext, "r");
 	if(!img) {
-		if(!header && link)
+		// if(!header && link)
+		
+		// try png just for the hell of it
+		ext[0] = '\0';
+		scat(ext, ".png");
+		img = getfile(fakepath, name, ext, "r");
+		if (!img) {
 			error("(fppict 1) Couldn't open image ", scat(scat(path, name), ext));
-		return 0;
+			// error("(fppict 1.5) Couldn't find png or jpg ", scat(path, name));
+			return 0;
+		}
+		
 	}
 	fclose(img);
 	if(!isVideo) {
@@ -526,13 +536,19 @@ fpmodule(FILE *f, Glossary *glo, char *s)
 		fpinclude(f, target, 2);
 	else if(scmp(cmd, "img")) {
 		int split2 = scin(target, ' ');
+
 		if(split2 > 0) {
 			char filename[256], caption[256];
 			sstr(target, filename, 0, split2);
 			sstr(target, caption, split2 + 1, slen(target) - split2);
+			int split3 = scin(filename, '.');
+			filename[split3] = '\0';
 			fppict(f, filename, caption, 0, 1);
-		} else
+		} else {
+			int split3 = scin(target, '.');
+			target[split3] = '\0';
 			fppict(f, target, NULL, 0, 1);
+		}
 	} else if(scmp(cmd, "marbles")) {
 		fpmarbles(f, target);
 	} else
@@ -741,7 +757,7 @@ fpbody(FILE *f, Glossary *glo, Lexicon *lex, Term *t)
 	fprintf(f, "<h1>%s</h1>\n", t->bref);
 	fpbodypart(f, glo, lex, t);
 }
-
+//m2
 void
 fpportal(FILE *f, Glossary *glo, Lexicon *lex, Term *t, int text, int img)
 {
@@ -1012,7 +1028,7 @@ fprss(FILE *f, Journal *jou)
 		fputs("  <description>\n", f);
 		fputs("<![CDATA[", f);
 		if(l.pict)
-			fprintf(f, "<figure><a href='" DOMAIN "media/%s.jpg' alt='Click the image for a higher resolution'><img src='" DOMAIN "media/%s-680.png'/></a><figcaption>%s: %s</figcaption></figure>\n", l.pict, l.pict, l.date, l.name);
+			fprintf(f, "<figure><a href='" DOMAIN "media/%s.png' alt='Click the image for a higher resolution'><img src='" DOMAIN "media/%s-680.png'/></a><figcaption>%s: %s</figcaption></figure>\n", l.pict, l.pict, l.date, l.name);
 		if(l.term)
 			fprintf(f, "<p>Filed under <i>%s/<a href='" DOMAIN "%s.html'>%s</a>: %s</i></p>", l.term->host, l.term->filename, l.term->filename, l.term->bref ? l.term->bref : "");
 		fputs("]]>\n", f);
@@ -1106,7 +1122,8 @@ parse_lexicon(FILE *fp, Block *block, Lexicon *lex)
 				t->caption = push(block, sstr(line, buf, 8, len - 8));
 			catch_body = ssin(line, "BODY") >= 0;
 			catch_link = ssin(line, "LINK") >= 0;
-		} else if(depth == 2 && len > 3) {
+		} else if(depth >= 2 && len > 3) {
+			// changed condition to depth >= 2 to allow for tabs in code blocks
 			if(catch_body)
 				t->body[t->body_len++] = push(block, sstr(line, buf, 2, len - 2));
 			else if(catch_link) {
@@ -1146,7 +1163,7 @@ parse_journal(FILE *fp, Block *block, Lexicon *lex, Journal *jou)
 		path[0] = '\0';
 		scat(path, "journal/");
 		scat(path, l->date);
-		img = getfile("../site/media/", path, ".jpg", "r");
+		img = getfile("../site/media/", path, ".png", "r");
 		if(img) {
 			l->pict = push(block, path);
 			fclose(img);

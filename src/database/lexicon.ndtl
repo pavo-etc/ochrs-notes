@@ -9,6 +9,13 @@ PROJECTS
 	BREF : Archive of ongoing and offgoing projects.
 	TYPE : img_portal
 
+ARCHIVE
+	HOST : index
+	BREF : Wisdom of the ancients.
+	CAPT : Cover image by <a href="https://xkcd.com/979/">xkcd</a>
+	BODY
+		This is a collection of solutions I have found to problems deep in internet rabbitholes.  I fear they will die to link rot eventually, so I archive them here.
+
 ABOUT
 	HOST : index
 	BREF : What is all this?
@@ -188,6 +195,26 @@ SNAKEWARE
 	LINKS
 		snakeware source code : https://github.com/joshiemoore/snakeware
 		CATH text editor : https://github.com/Cyppa/CATH-for-Snakeware
+
+SCREENTEARING
+	HOST : archive
+	BREF : Fixing Screentearing on Xfce.
+	BODY
+		Tested myself on Xfce 4.12 on Xubuntu 20.04 on trenzalore (Intel HD Graphics 530), allegedly works on Xubuntu 16.04.03.
+
+		Create file `/etc/X11/xorg.conf` with the content:
+
+		```
+		Section "Device"
+			Identifier	"Intel Graphics"
+			Driver		"intel"
+			Option		"AccelMethod"	"sna"
+			Option		"TearFree"	"true"
+		EndSection
+		```
+
+	LINKS
+		Source : https://forum.xfce.org/viewtopic.php?id=12019
 
 404
 	HOST : index
