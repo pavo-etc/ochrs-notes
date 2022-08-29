@@ -165,7 +165,6 @@ MERVEILLES MEETUP 01
 		{^img albums/220429_MerveillesMeetup/220501_5105.jpg}
 		{^img albums/220429_MerveillesMeetup/220501_5124.jpg}
 		{^img albums/220429_MerveillesMeetup/220501_5138.jpg}
-
 SNAKEWARE
 	HOST : development
 	BREF : A Linux-based operating system with a pure Python userspace
@@ -198,7 +197,7 @@ SNAKEWARE
 
 SCREENTEARING
 	HOST : archive
-	BREF : Fixing Screentearing on Xfce.
+	BREF : Fixing screentearing on Xfce.
 	BODY
 		Tested myself on Xfce 4.12 on Xubuntu 20.04 on trenzalore (Intel HD Graphics 530), allegedly works on Xubuntu 16.04.03.
 
@@ -218,7 +217,7 @@ SCREENTEARING
 
 KEYCHRON FN KEYS
 	HOST : archive
-	BREF : Fixing Keychron Function Keys on Linux.
+	BREF : Fixing Keychron function keys on Linux machines.
 	BODY
 		Tested on Keychron K2v2 on Xubuntu 20.04 and 22.04 on trenzalore.
 
