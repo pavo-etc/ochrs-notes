@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel='apple-touch-icon' sizes='180x180' href='/media/icon/apple-touch-icon.png'/>
+<link rel='icon' type='image/png' sizes='32x32' href='/media/icon/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/media/icon/favicon-16x16.png' />
+<link rel='manifest' href='/media/icon/site.webmanifest' />
+<link rel='mask-icon' href='/media/icon/safari-pinned-tab.svg' color='#bd93f9' />
+<link rel='shortcut icon' href='/media/icon/favicon.ico' />
+<meta name='msapplication-TileColor' content='#603cba' />
+<meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
+<meta name='theme-color' content='#282A36' />
+<meta charset='UTF-8'>
+<meta name='description' content='Fixing Keychron Function Keys on Linux.' />
+<meta name='author' content='Zach Manson' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='stylesheet' type='text/css' href='links/main.css' />
+<title>notes: keychron fn keys</title>
+<meta property='og:title' content='keychron fn keys' />
+<meta property='og:type' content='website' />
+<meta property='og:description' content='Fixing Keychron Function Keys on Linux.' />
+<meta property='og:site_name' content='notes' />
+<meta property='og:url' content='https://notes.zachmanson.com//keychron_fn_keys.html' />
+</head>
+<body>
+<nav>
+<a href='index.html'><img src='/media/icon/icon.png' alt='notes' height='100' /></a>
+<ul>
+<li><a href='projects.html'>projects</a></li>
+<li><a href='archive.html' class="active">archive</a></li>
+<li><a href='about.html'>about</a></li>
+<li><a href='journal.html'>journal</a></li>
+</ul>
+<ul>
+<li><a href='screentearing.html'>screentearing</a></li>
+<li><a href='keychron_fn_keys.html' class="active">keychron fn keys</a></li>
+</ul>
+<ul>
+</ul>
+</nav>
+<main>
+<h1>Fixing Keychron Function Keys on Linux.</h1>
+<p>Tested on Keychron K2v2 on Xubuntu 20.04 and 22.04 on trenzalore.</p>
+<p>To enable Function keys on Keychron K2:</p>
+<ul>
+<li>Set the keyboard to Windows mode</li>
+<li>Run the following command:</li>
+</ul>
+<pre>
+echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
+</pre>
+<p>To make this change persistent, add a module option for hid_apple:</p>
+<pre>
+echo "options hid_apple fnmode=0" | sudo tee -a /etc/modprobe.d/hid_apple.conf
+</pre>
+<p>To toggle function mode, hold Fn + X + L for 4 seconds.</p>
+<p>If this all fails, set it back to 1:</p>
+<pre>
+echo 1 | sudo tee /sys/module/hid_apple/parameters/fnmode
+</pre>
+<h3>Links</h3><ul>
+<li><a href='https://www.reddit.com/r/MechanicalKeyboards/comments/d5io49/keychron_k2_f_keys_dont_work_w_linux_help/' target='_blank'>Original post</a></li>
+<li><a href='https://mikeshade.com/posts/keychron-linux-function-keys/' target='_blank'>Adding persistency</a></li>
+<li><a href='https://web.archive.org/web/20220721020355/https://mikeshade.com/posts/keychron-linux-function-keys/' target='_blank'>Archived Adding persistency</a></li>
+<li><a href='https://github.com/Kurgol/keychron/blob/master/k2.md)' target='_blank'>Other Keychron settings</a></li>
+<li><a href='https://github.com/pavo-etc/keychron' target='_blank'>Other Keychron settings fork</a></li>
+</ul></main>
+<footer>
+<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Mon Aug 29 22:49:46 2022
+</em>
+<hr />
+<section>
+<p>Made ineffeciently by <a href='https://zachmanson.com'>Zach Manson</a></p>
+</section>
+</footer>
+</body>
+</html>
