@@ -564,11 +564,18 @@ fptemplate(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
 	for(i = 0; i < len; ++i) {
 		char c = s[i];
 		if(c == '}') {
-			capture = 0;
-			if(buf[0] == '^' && f)
-				fpmodule(f, glo, buf);
-			else if(buf[0] != '^')
-				fptemplatelink(f, lex, t, buf);
+			if (capture == 0) {
+				// if '}' found without '{' first
+				if (f) fputc(c, f);
+			} else {
+				capture = 0;
+				if(buf[0] == '^' && f)
+					fpmodule(f, glo, buf);
+
+				else if(buf[0] != '^')
+					fptemplatelink(f, lex, t, buf);
+
+			}
 		}
 		if(capture)
 			ccat(buf, c);
@@ -1104,6 +1111,7 @@ parse_lexicon(FILE *fp, Block *block, Lexicon *lex)
 			return errorid("Increase memory", "Lexicon", lex->len);
 		if(len > 750)
 			return errorid("Line is too long", line, len);
+		// printf("depth: %d len: %d\n",depth, len);
 		if(depth == 0) {
 			t = maketerm(&lex->terms[lex->len++], push(block, sstr(line, buf, 0, len)));
 			if(!sian(line))
@@ -1122,8 +1130,9 @@ parse_lexicon(FILE *fp, Block *block, Lexicon *lex)
 				t->caption = push(block, sstr(line, buf, 8, len - 8));
 			catch_body = ssin(line, "BODY") >= 0;
 			catch_link = ssin(line, "LINK") >= 0;
-		} else if(depth >= 2 && len > 3) {
+		} else if(depth >= 2 && len >= 3) {
 			// changed condition to depth >= 2 to allow for tabs in code blocks
+			// changed condition to len >= 3 to allow for line such as \t\t} in a code block
 			if(catch_body)
 				t->body[t->body_len++] = push(block, sstr(line, buf, 2, len - 2));
 			else if(catch_link) {
