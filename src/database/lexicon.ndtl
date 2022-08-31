@@ -249,6 +249,44 @@ KEYCHRON FN KEYS
 		Other Keychron settings : https://github.com/Kurgol/keychron/blob/master/k2.md)
 		Other Keychron settings fork : https://github.com/pavo-etc/keychron
 
+FIREFOX PHOTON
+	HOST : archive
+	BREF : Styling Firefox Proton to resemble Firefox Photon.
+	BODY
+		Originally tested on Firefox 91, confirmed working on Firefox 104.
+
+		{^img firefox-photon}
+
+		Firefox Photon
+
+		{^img firefox-proton}
+
+		Firefox Proton
+
+		Firefox Proton brought many lovely features, but I deeply prefer the Photon tab design.  Luckily, Proton supports applying CSS styling to window elements like the tab bar.
+
+		1. Open `about:config`
+		2. Find for `toolkit.legacyUserProfileCustomizations.stylesheets`, set its value to true.
+		3. Open `about:support` and go to the directory marked "Profile Directory" or "Profile Folder".
+		4. Create file `<profile directory>/chrome/userChrome.css` with custom stylesheet, e.g.
+		```
+		.tab-background {
+			border-radius: 0px 0px !important;
+			margin-bottom: 0px !important;
+			margin-top: 0px !important;
+		}
+
+		.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+			background-color: color-mix(in srgb, currentColor 0%, transparent);
+			}
+		{console.log()}
+		```
+		5. Restart Firefox
+
+		{^img firefox-proton-modded}
+
+	LINKS
+		Source : https://superuser.com/questions/1653533/how-to-switch-back-to-firefox-old-style-of-tabs/1669549#1669549
 
 404
 	HOST : index
