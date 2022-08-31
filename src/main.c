@@ -556,34 +556,36 @@ fpmodule(FILE *f, Glossary *glo, char *s)
 }
 
 void
-fptemplate(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
-{
+fptemplate(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s, int code)
+{	
+	// printf("code: %d line: %s\n", code, s);
 	int i = 0, capture = 0, len;
 	char buf[1024];
 	len = slen(s);
-	for(i = 0; i < len; ++i) {
-		char c = s[i];
-		if(c == '}') {
-			if (capture == 0) {
-				// if '}' found without '{' first
-				if (f) fputc(c, f);
-			} else {
+	if (code == 1) {
+		// printf("FILE %d\n", *f);
+		fputs(s, f);
+	} else {
+		for(i = 0; i < len; ++i) {
+			char c = s[i];
+			if(c == '}') {
 				capture = 0;
 				if(buf[0] == '^' && f)
 					fpmodule(f, glo, buf);
-
-				else if(buf[0] != '^')
+				else if(buf[0] != '^') {
+					// printf("buf:%s\n", buf);
 					fptemplatelink(f, lex, t, buf);
-
+				}
 			}
-		}
-		if(capture)
-			ccat(buf, c);
-		else if(c != '{' && c != '}' && f)
-			fputc(c, f);
-		if(c == '{') {
-			capture = 1;
-			buf[0] = '\0';
+
+			if(capture)
+				ccat(buf, c);
+			else if(c != '{' && c != '}' && f)
+				fputc(c, f);
+			if(c == '{') {
+				capture = 1;
+				buf[0] = '\0';
+			}
 		}
 	}
 }
@@ -684,9 +686,9 @@ fptag(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
 			split = scin(tmp, c);
 			if(split > 0) {
 				switch(c) {
-				case '~': scpy("i", tags, 2); break;
-				case '`': scpy("code", tags, 5); break;
-				default: scpy("b", tags, 2); break;
+					case '~': scpy("i", tags, 2); break;
+					case '`': scpy("code", tags, 5); break;
+					default: scpy("b", tags, 2); break;
 				}
 				scat(new, "<");
 				scat(new, tags);
@@ -698,10 +700,14 @@ fptag(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
 				scat(new, sstr(buf, tmp, i + 2 + split, len - split));
 				len = slen(new);
 				scpy(new, buf, len + 1);
+				// printf("buf:%s\n", buf);
+				// printf("new:%s\n", new);
+				// printf("tags:%s\n================================\n\n", tags);
 			}
 		}
 	}
-	fptemplate(f, glo, lex, t, buf);
+	// printf("fptag: %s", buf);
+	fptemplate(f, glo, lex, t, buf, 0);
 }
 
 void
@@ -741,10 +747,11 @@ fpbodypart(FILE *f, Glossary *glo, Lexicon *lex, Term *t)
 			}
 			continue;
 		}
-		if(formatcode)
+		if(formatcode) {
 			fptag(f, glo, lex, t, line);
-		else {
-			fptemplate(f, glo, lex, t, line);
+		} else {
+			// printf("fptemplate line:%s\ncode:%d\n", line, code );
+			fptemplate(f, glo, lex, t, line, code);
 			fputs("\n", f);
 		}
 		if(i == t->body_len - 1 && list && f)
@@ -1220,14 +1227,18 @@ parse(Block *block, Glossary *glo, Lexicon *lex, Journal *jou)
 int
 link(Glossary *glo, Lexicon *lex)
 {
-	int i, j;
+	// int i, j;
+	int i;
 	printf("Linking  | ");
 	printf("glossary:%d ", glo->len);
 	printf("lexicon:%d ", lex->len);
 	for(i = 0; i < lex->len; ++i) {
 		Term *t = &lex->terms[i];
-		for(j = 0; j < t->body_len; ++j)
-			fptemplate(NULL, glo, lex, t, t->body[j]);
+		// Unclear what purpose this serves, works fine without?
+		// for(j = 0; j < t->body_len; ++j) {
+		// 	printf("link: %s\n",t->body[j]);
+		// 	fptemplate(NULL, glo, lex, t, t->body[j], 0);
+		// }
 		t->parent = findterm(lex, t->host);
 		if(scmp(t->name, "404"))
 			continue;
