@@ -11,47 +11,39 @@
 <meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
 <meta name='theme-color' content='#282A36' />
 <meta charset='UTF-8'>
-<meta name='description' content='Fixing screentearing on Xfce.' />
+<meta name='description' content='Some stories from the internet.' />
 <meta name='author' content='Zach Manson' />
 <meta name='viewport' content='width=device-width, initial-scale=1' />
 <link rel='stylesheet' type='text/css' href='links/main.css' />
-<title>notes: screentearing</title>
-<meta property='og:title' content='screentearing' />
+<title>notes: folklore</title>
+<meta property='og:title' content='folklore' />
 <meta property='og:type' content='website' />
-<meta property='og:description' content='Fixing screentearing on Xfce.' />
+<meta property='og:description' content='Some stories from the internet.' />
 <meta property='og:site_name' content='notes' />
-<meta property='og:url' content='https://notes.zachmanson.com//screentearing.html' />
+<meta property='og:url' content='https://notes.zachmanson.com//folklore.html' />
 </head>
 <body>
 <nav>
 <a href='index.html'><img src='/media/icon/icon.png' alt='notes' height='100' /></a>
 <ul>
-<li><a href='folklore.html'>folklore</a></li>
-<li><a href='problems.html' class="active">problems</a></li>
+<li><a href='projects.html'>projects</a></li>
+<li><a href='archive.html' class="active">archive</a></li>
+<li><a href='about.html'>about</a></li>
+<li><a href='journal.html'>journal</a></li>
 </ul>
 <ul>
-<li><a href='screentearing.html' class="active">screentearing</a></li>
-<li><a href='keychron_fn_keys.html'>keychron fn keys</a></li>
-<li><a href='firefox_photon.html'>firefox photon</a></li>
+<li><a href='folklore.html' class="active">folklore</a></li>
+<li><a href='problems.html'>problems</a></li>
 </ul>
 <ul>
+<li><a href='500_miles.html'>500 miles</a></li>
 </ul>
 </nav>
 <main>
-<h1>Fixing screentearing on Xfce.</h1>
-<p>Tested myself on Xfce 4.12 on Xubuntu 20.04 on trenzalore (Intel HD Graphics 530), allegedly works on Xubuntu 16.04.03.</p>
-<p>Create file <code>/etc/X11/xorg.conf</code> with the content:</p>
-<pre>
-Section "Device"
-	Identifier	"Intel Graphics"
-	Driver		"intel"
-	Option		"AccelMethod"	"sna"
-	Option		"TearFree"	"true"
-EndSection
-</pre>
-<h3>Links</h3><ul>
-<li><a href='https://forum.xfce.org/viewtopic.php?id=12019' target='_blank'>Source</a></li>
-</ul></main>
+<h1>Some stories from the internet.</h1>
+<h2><a href='500_miles.html'>500 miles</a></h2>
+<sub>The case of the 500-mile email</sub>
+</main>
 <footer>
 <img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Sun Sep  4 21:36:22 2022
 </em>

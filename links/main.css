@@ -183,6 +183,7 @@ main code {
 main pre {
   display: inline-block;
   min-width: 100%;
+  max-width: 100%;
   margin: 0.5rem 0;
   border: 2px solid var(--purple);
   border-radius: 8px;
