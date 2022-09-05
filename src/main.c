@@ -353,17 +353,16 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 	img = getfile(fakepath, name, ext, "r");
 	if(!img) {
 		// if(!header && link)
-		
+
 		// try png just for the hell of it
 		ext[0] = '\0';
 		scat(ext, ".png");
 		img = getfile(fakepath, name, ext, "r");
-		if (!img) {
+		if(!img) {
 			error("(fppict 1) Couldn't open image ", scat(scat(path, name), ext));
 			// error("(fppict 1.5) Couldn't find png or jpg ", scat(path, name));
 			return 0;
 		}
-		
 	}
 	fclose(img);
 	if(!isVideo) {
@@ -557,12 +556,12 @@ fpmodule(FILE *f, Glossary *glo, char *s)
 
 void
 fptemplate(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s, int code)
-{	
+{
 	// printf("code: %d line: %s\n", code, s);
 	int i = 0, capture = 0, len;
 	char buf[1024];
 	len = slen(s);
-	if (code == 1) {
+	if(code == 1) {
 		// printf("FILE %d\n", *f);
 		fputs(s, f);
 	} else {
@@ -686,9 +685,9 @@ fptag(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
 			split = scin(tmp, c);
 			if(split > 0) {
 				switch(c) {
-					case '~': scpy("i", tags, 2); break;
-					case '`': scpy("code", tags, 5); break;
-					default: scpy("b", tags, 2); break;
+				case '~': scpy("i", tags, 2); break;
+				case '`': scpy("code", tags, 5); break;
+				default: scpy("b", tags, 2); break;
 				}
 				scat(new, "<");
 				scat(new, tags);

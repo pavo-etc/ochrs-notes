@@ -9,12 +9,15 @@ PROJECTS
 	BREF : Archive of ongoing and offgoing projects.
 	TYPE : img_portal
 
+NOTES
+	HOST : index
+	BREF : Assorted notes and research.
+
 ARCHIVE
 	HOST : index
-	BREF : Wisdom of the ancients.
-	CAPT : Cover image by <a href="https://xkcd.com/979/">xkcd</a>
+	BREF : Things collected for posterity.
 	BODY
-		This is a collection of solutions I have found to problems deep in internet rabbitholes.  I fear they will die to link rot eventually, so I archive them here.
+		A collection of things I don't want to see disappear.  Some are just pieces of information it took me a long time to find and I hope that hosting here will make easier for others to find in the future.
 
 ABOUT
 	HOST : index
@@ -31,6 +34,36 @@ DEVELOPMENT
 	HOST : projects
 	TYPE : img_portal
 	BREF : Notes on software projects I have created or contributed to.
+
+LANGUAGE
+	HOST : notes
+	BREF : Notes on language and languages.
+	BODY
+		## Dictionary
+
+		DoOS refers to the <a href="https://www.dictionaryofobscuresorrows.com/">Dictionary of Obscure Sorrows</a>.
+
+		+ *Complect* - intertwine, embrace especially; to plait together; interweave.
+		+ *Ichor* - God's equivalent for blood
+		+ *Interrobang* (Character) - ‽
+		+ *Juvenioa* (English) - The fear or hostility directed by an older generation toward a younger one, or toward youth culture in general.
+		+ *Kenja Taimu* (Japanese) - post-jerk clarity / wiseman time
+		+ *Loquacious* (English) - tending to talk a great deal; talkative.
+		+ *Midding* (DoOS) - feeling the tranquil pleasure of being near a gathering but not quite in it—hovering on the perimeter of a campfire, chatting outside a party while others dance inside, resting your head in the backseat of a car listening to your friends chatting up front—feeling blissfully invisible yet still fully included, safe in the knowledge that everyone is together and everyone is okay, with all the thrill of being there without the burden of having to be.
+		+ *Mojibake* (Japanese) - garbled characters
+		+ *Moment* of Tangency - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
+		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
+		+ *Petrichor* (English) - A pleasant, distinctive smell frequently accompanying the first rain after a long period of warm, dry weather in certain regions
+		+ *Phaneron* (English-ish) - the collective total of all that is in any way or in any sense present to the mind, quite regardless of whether it corresponds to any real thing or not
+		+ *Schadenfreude* (German) - enjoyment obtained from the troubles of others
+		+ *Setsunai* (Japanese) - nostalgic/whistful/longing/melancholy/sad/heartache/bittersweet
+		+ *Sonder* (DoOS) - the realization that each random passerby is living a life as vivid and complex as your own
+		+ *Vellichor* (English) - the strange wistfulness of used bookstores
+		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
+		+ *Weltschmerz* (German) - A feeling of sentimental sadness or pessimism; the weariness that comes with knowing that the world is going to let you down no matter what and there’s nothing you can do to stop it
+		+ *Yuenyeung* (Cantonese) - coffee with tea
+	LINKS
+		Dictionary of Obscure Sorrows : https://www.dictionaryofobscuresorrows.com/
 
 META
 	HOST : about
@@ -60,6 +93,10 @@ LICENSE
 		The assets and text content is under the BY-NC-SA4.0 License.
 		~You are free to:~<br />*Share:* copy and redistribute the material in any medium or format.<br />*Adapt:* remix, transform, and build upon the material.
 		~Under the following terms:~<br />*Attribution:* You must give appropriate credit.<br />*NonCommercial:* You may not use the material for commercial purposes.<br />*ShareAlike:* You must distribute your contributions under the same license.
+
+		Portions of the assets and text content of this site belong to by Devine Lu Linvega and Clemens Scott, as an artifact of having forked Nchrs.  See {meta}.
+		
+		The text content of pages in {folklore} are not necessarily covered by these licenses, as they are shamelessly stolen.  Please <a href="https://zachmanson.com">email me</a> if this is an issue.
 	LINKS
 		BY-NC-SA4.0 License : https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -165,6 +202,7 @@ MERVEILLES MEETUP 01
 		{^img albums/220429_MerveillesMeetup/220501_5105.jpg}
 		{^img albums/220429_MerveillesMeetup/220501_5124.jpg}
 		{^img albums/220429_MerveillesMeetup/220501_5138.jpg}
+
 SNAKEWARE
 	HOST : development
 	BREF : A Linux-based operating system with a pure Python userspace
@@ -195,8 +233,29 @@ SNAKEWARE
 		snakeware source code : https://github.com/joshiemoore/snakeware
 		CATH text editor : https://github.com/Cyppa/CATH-for-Snakeware
 
-SCREENTEARING
+FOLKLORE
 	HOST : archive
+	BREF : Some stories from the internet.
+
+PROBLEMS
+	HOST : archive
+	BREF : Wisdom of the ancients.
+	CAPT : Cover image by <a href="https://xkcd.com/979/">xkcd</a>
+	BODY
+		This is a collection of solutions I have found to problems deep in internet rabbitholes.  I fear they will die to link rot eventually, so I archive them here.
+
+500 MILES
+	HOST : folklore
+	BREF : The case of the 500-mile email
+	BODY
+		The following is the 500-mile email story in the form it originally appeared, in a post to sage-members on Sun, 24 Nov 2002.:
+		{^code 500miles.txt}
+	LINKS
+		Source : http://www.ibiblio.org/harris/500milemail.html
+		Harris' FAQ : http://www.ibiblio.org/harris/500milemail-faq.html
+
+SCREENTEARING
+	HOST : problems
 	BREF : Fixing screentearing on Xfce.
 	BODY
 		Tested myself on Xfce 4.12 on Xubuntu 20.04 on trenzalore (Intel HD Graphics 530), allegedly works on Xubuntu 16.04.03.
@@ -216,7 +275,7 @@ SCREENTEARING
 		Source : https://forum.xfce.org/viewtopic.php?id=12019
 
 KEYCHRON FN KEYS
-	HOST : archive
+	HOST : problems
 	BREF : Fixing Keychron function keys on Linux machines.
 	BODY
 		Tested on Keychron K2v2 on Xubuntu 20.04 and 22.04 on trenzalore.
@@ -250,7 +309,7 @@ KEYCHRON FN KEYS
 		Other Keychron settings fork : https://github.com/pavo-etc/keychron
 
 FIREFOX PHOTON
-	HOST : archive
+	HOST : problems
 	BREF : Styling Firefox Proton to resemble Firefox Photon.
 	BODY
 		Originally tested on Firefox 91, confirmed working on Firefox 104.
@@ -278,8 +337,7 @@ FIREFOX PHOTON
 
 		.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
 			background-color: color-mix(in srgb, currentColor 0%, transparent);
-			}
-		{console.log()}
+		}
 		```
 		5. Restart Firefox
 
