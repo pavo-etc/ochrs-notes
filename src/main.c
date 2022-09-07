@@ -284,7 +284,8 @@ fptemplatelink(FILE *f, Lexicon *lex, Term *t, char *s)
 	} else {
 		Term *tt = findterm(lex, target);
 		if(!tt)
-			return error("Unknown link", target);
+			return 0;
+		// return error("Unknown link", target);
 		if(f)
 			fprintf(f, "<a href='%s.html'>%s</a>", tt->filename, name);
 		else {
@@ -1226,18 +1227,18 @@ parse(Block *block, Glossary *glo, Lexicon *lex, Journal *jou)
 int
 link(Glossary *glo, Lexicon *lex)
 {
-	// int i, j;
-	int i;
+	int i, j;
+	// int i;
 	printf("Linking  | ");
 	printf("glossary:%d ", glo->len);
 	printf("lexicon:%d ", lex->len);
 	for(i = 0; i < lex->len; ++i) {
 		Term *t = &lex->terms[i];
 		// Unclear what purpose this serves, works fine without?
-		// for(j = 0; j < t->body_len; ++j) {
-		// 	printf("link: %s\n",t->body[j]);
-		// 	fptemplate(NULL, glo, lex, t, t->body[j], 0);
-		// }
+		for(j = 0; j < t->body_len; ++j) {
+			// printf("link: %s\n", t->body[j]);
+			fptemplate(NULL, glo, lex, t, t->body[j], 0);
+		}
 		t->parent = findterm(lex, t->host);
 		if(scmp(t->name, "404"))
 			continue;
