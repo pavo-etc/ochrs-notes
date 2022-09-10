@@ -6,6 +6,7 @@
 #define LEXMEM 500
 #define LOGMEM 4096 * 4
 #define ITEMS 64
+#define BODYLINES 128
 
 #define NAME "notes"
 #define DOMAIN "https://notes.zachmanson.com/"
@@ -24,7 +25,7 @@ typedef struct List {
 typedef struct Term {
 	int body_len, children_len, incoming_len, outgoing_len, logs_len, events_len;
 	char *name, *host, *bref, *type, *filename, *date, *date_from, *date_last, *caption;
-	char *body[ITEMS];
+	char *body[BODYLINES];
 	struct List link;
 	struct Term *parent;
 	struct Term *children[ITEMS];
@@ -360,9 +361,9 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 		scat(ext, ".png");
 		img = getfile(fakepath, name, ext, "r");
 		if(!img) {
-			if(caption)
+			if(caption && !header)
 				fprintf(f, "<sub>%s</sub>\n", caption);
-			if(ssin(path, "header/")) {
+			if(ssin(path, "headers") != -1) {
 				printf("Missing header image: %s\n", name);
 			} else {
 				error("(fppict 1) Couldn't open image ", scat(scat(path, name), ext));
