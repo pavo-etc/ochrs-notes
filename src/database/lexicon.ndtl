@@ -110,6 +110,10 @@ STYLESHEET
 		- Mehmet Murat Ildan
 
 		### Headings
+		# Heading 1
+		## Heading 2
+		### Heading 3
+		#### Heading 4
 		```
 		# Heading 1
 		## Heading 2
@@ -117,23 +121,33 @@ STYLESHEET
 		#### Heading 4
 		```
 		### Text
+		This is a paragraph.<br />Line breaks need a < br > HTML tag.
+		This text is *bold*.
+		This text is ~italic~.
 		```
 		This is a paragraph.<br />Line breaks need a < br > HTML tag.
 		This text is *bold*.
 		This text is ~italic~.
 		```
 		### Lists
+		+ List Item 1
+		+ List Item 2
+		+ List Item 3
 		```
 		+ List Item 1
 		+ List Item 2
 		+ List Item 3
 		```
 		### Quotes
+		"This a quote."
+		- This is a cite.
 		```
 		"This a quote."
 		- This is a cite.
 		```
 		### Tables
+		| Column 1 | Column 2 | Column 3 |
+		| Column 1 | Column 2 | Column 3 |
 		```
 		| Column 1 | Column 2 | Column 3 |
 		| Column 1 | Column 2 | Column 3 |
@@ -169,7 +183,6 @@ STYLESHEET
 
 		This is a list:
 		{^list personal wiki links}
-
 	LINKS
 		JailBreak Guide : https://www.mobileread.com/forums/showthread.php?t=320564
 		Project Gutenberg : https://www.gutenberg.org/
@@ -182,31 +195,9 @@ GOALS
 	BODY
 		Things may also go here
 
-ALBUMS
-	HOST : projects
-	TYPE : img_portal
-	BREF : A collection of photo albums.
-
-A2022
-	HOST : albums
-	TYPE : img_portal
-	BREF : Pictures of 2022.
-
-MERVEILLES MEETUP 01
-	HOST : a2022
-	BREF : A meetup of members of the Merveilles community on an uninhabited island in the lagoons of Venice.
-	DATE : 220429
-	CAPT : Entrance to an old fort.
-	BODY
-		{^img albums/220429_MerveillesMeetup/220429_5052.jpg}
-		{^img albums/220429_MerveillesMeetup/220430_5061.jpg}
-		{^img albums/220429_MerveillesMeetup/220501_5105.jpg}
-		{^img albums/220429_MerveillesMeetup/220501_5124.jpg}
-		{^img albums/220429_MerveillesMeetup/220501_5138.jpg}
-
 SNAKEWARE
 	HOST : development
-	BREF : A Linux-based operating system with a pure Python userspace
+	BREF : A Linux-based operating system with a pure Python userspace.
 	BODY
 		snakeware is an experimental OS with developed in 2020.  Its userspace is written entirely in Python, barring a single Busybox root process.  It was created by Joshua Moore drawing inspiration from the Commodore 64.  The window manager, snakewm, is written primarily with pygame_gui.  It is not based on X11 or Wayland, instead writing directly to the framebuffer (`/dev/fb0`).
 
