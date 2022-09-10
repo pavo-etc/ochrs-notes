@@ -360,7 +360,13 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 		scat(ext, ".png");
 		img = getfile(fakepath, name, ext, "r");
 		if(!img) {
-			error("(fppict 1) Couldn't open image ", scat(scat(path, name), ext));
+			if(caption)
+				fprintf(f, "<sub>%s</sub>\n", caption);
+			if(ssin(path, "header/")) {
+				printf("Missing header image: %s\n", name);
+			} else {
+				error("(fppict 1) Couldn't open image ", scat(scat(path, name), ext));
+			}
 			// error("(fppict 1.5) Couldn't find png or jpg ", scat(path, name));
 			return 0;
 		}
