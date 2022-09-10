@@ -66,6 +66,8 @@ figcaption {
 header img {
   width: 100%;
   max-width: 100%;
+  max-height: 640px;
+  object-fit: cover;
 }
 header figcaption {
   font-size: 0.9em;
