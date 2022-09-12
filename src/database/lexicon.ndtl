@@ -36,36 +36,6 @@ DEVELOPMENT
 	TYPE : img_portal
 	BREF : Notes on software projects I have created or contributed to.
 
-LANGUAGE
-	HOST : notes
-	BREF : Notes on language and languages.
-	BODY
-		## Dictionary
-
-		DoOS refers to the <a href="https://www.dictionaryofobscuresorrows.com/">Dictionary of Obscure Sorrows</a>.
-
-		+ *Complect* - intertwine, embrace especially; to plait together; interweave.
-		+ *Ichor* - God's equivalent for blood
-		+ *Interrobang* (Character) - ‽
-		+ *Juvenioa* (English) - The fear or hostility directed by an older generation toward a younger one, or toward youth culture in general.
-		+ *Kenja Taimu* (Japanese) - post-jerk clarity / wiseman time
-		+ *Loquacious* (English) - tending to talk a great deal; talkative.
-		+ *Midding* (DoOS) - feeling the tranquil pleasure of being near a gathering but not quite in it—hovering on the perimeter of a campfire, chatting outside a party while others dance inside, resting your head in the backseat of a car listening to your friends chatting up front—feeling blissfully invisible yet still fully included, safe in the knowledge that everyone is together and everyone is okay, with all the thrill of being there without the burden of having to be.
-		+ *Mojibake* (Japanese) - garbled characters
-		+ *Moment* of Tangency - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
-		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
-		+ *Petrichor* (English) - A pleasant, distinctive smell frequently accompanying the first rain after a long period of warm, dry weather in certain regions
-		+ *Phaneron* (English-ish) - the collective total of all that is in any way or in any sense present to the mind, quite regardless of whether it corresponds to any real thing or not
-		+ *Schadenfreude* (German) - enjoyment obtained from the troubles of others
-		+ *Setsunai* (Japanese) - nostalgic/whistful/longing/melancholy/sad/heartache/bittersweet
-		+ *Sonder* (DoOS) - the realization that each random passerby is living a life as vivid and complex as your own
-		+ *Vellichor* (English) - the strange wistfulness of used bookstores
-		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
-		+ *Weltschmerz* (German) - A feeling of sentimental sadness or pessimism; the weariness that comes with knowing that the world is going to let you down no matter what and there’s nothing you can do to stop it
-		+ *Yuenyeung* (Cantonese) - coffee with tea
-	LINKS
-		Dictionary of Obscure Sorrows : https://www.dictionaryofobscuresorrows.com/
-
 META
 	HOST : about
 	BREF : About this website.
@@ -338,6 +308,37 @@ FIREFOX PHOTON
 	LINKS
 		Source : https://superuser.com/questions/1653533/how-to-switch-back-to-firefox-old-style-of-tabs/1669549#1669549
 
+LANGUAGE
+	HOST : notes
+	BREF : Notes on language and languages.
+	BODY
+		## Dictionary
+
+		DoOS refers to the <a href="https://www.dictionaryofobscuresorrows.com/">Dictionary of Obscure Sorrows</a>.
+
+		+ *Apricity* (English) - the warmth of the sun in winter
+		+ *Complect* - intertwine, embrace especially; to plait together; interweave.
+		+ *Ichor* - God's equivalent for blood
+		+ *Interrobang* (Character) - ‽
+		+ *Juvenioa* (English) - The fear or hostility directed by an older generation toward a younger one, or toward youth culture in general.
+		+ *Kenja Taimu* (Japanese) - post-jerk clarity / wiseman time
+		+ *Loquacious* (English) - tending to talk a great deal; talkative.
+		+ *Midding* (DoOS) - feeling the tranquil pleasure of being near a gathering but not quite in it—hovering on the perimeter of a campfire, chatting outside a party while others dance inside, resting your head in the backseat of a car listening to your friends chatting up front—feeling blissfully invisible yet still fully included, safe in the knowledge that everyone is together and everyone is okay, with all the thrill of being there without the burden of having to be.
+		+ *Mojibake* (Japanese) - garbled characters
+		+ *Moment of Tangency* (DoOS) - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
+		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
+		+ *Petrichor* (English) - A pleasant, distinctive smell frequently accompanying the first rain after a long period of warm, dry weather in certain regions
+		+ *Phaneron* (English-ish) - the collective total of all that is in any way or in any sense present to the mind, quite regardless of whether it corresponds to any real thing or not
+		+ *Schadenfreude* (German) - enjoyment obtained from the troubles of others
+		+ *Setsunai* (Japanese) - nostalgic/whistful/longing/melancholy/sad/heartache/bittersweet
+		+ *Sonder* (DoOS) - the realization that each random passerby is living a life as vivid and complex as your own
+		+ *Vellichor* (English) - the strange wistfulness of used bookstores
+		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
+		+ *Weltschmerz* (German) - A feeling of sentimental sadness or pessimism; the weariness that comes with knowing that the world is going to let you down no matter what and there’s nothing you can do to stop it
+		+ *Yuenyeung* (Cantonese) - coffee with tea
+	LINKS
+		Dictionary of Obscure Sorrows : https://www.dictionaryofobscuresorrows.com/
+
 GENERATIVE ART
 	HOST : notes
 	BREF : Notes on generative art models.
@@ -350,7 +351,7 @@ STABLE DIFFUSION
 	BODY
 		## Prompt Cheatsheet
 
-		Written by by <a href="https://moritz.pm">Moritz</a> under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.  Only minor formatting changes have been made.
+		Written by <a href="https://moritz.pm">Moritz</a> under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.  Only minor formatting changes have been made.
 
 		The further to the beginning of the prompt a word is placed, the greater its effect. Use multiple exclamation marks !! to stress a word and brackets () to reduce its strength.
 		
@@ -379,6 +380,18 @@ STABLE DIFFUSION
 	LINKS
 		Original prompt cheatsheet : https://moritz.pm/posts/parameters
 
+MISCELLANY
+	HOST : notes
+	BREF : Information yet to find a home.
+
+MISTAKES
+	HOST : miscellany
+	BREF : Mistakes in computing that were only realised after the point of no return.
+	BODY
+		## Referer HTTP Header
+		"Referer" is a field in the HTTP request headers that contains the previous page that linked to the requested page. This misspelling of the word "referrer" was present in the original proposal for the field in the HTTP specification, made by Phillip Hallam-Baker. This spelling was then widely implemented by the software of the time, and solidified by RFC 1945 which documented the HTTP/1.0 protocol as it was being comtemporarily used.
+
+		More details on this can be found on this field and its etymology on its <a href="https://en.wikipedia.org/wiki/HTTP_referer">Wikipedia entry</a>.
 
 404
 	HOST : index
