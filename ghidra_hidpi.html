@@ -11,47 +11,50 @@
 <meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
 <meta name='theme-color' content='#282A36' />
 <meta charset='UTF-8'>
-<meta name='description' content='Assorted notes and research.' />
+<meta name='description' content='Making Ghidra scale on HiDPI screens.' />
 <meta name='author' content='Zach Manson' />
 <meta name='viewport' content='width=device-width, initial-scale=1' />
 <link rel='stylesheet' type='text/css' href='links/main.css' />
-<title>notes: notes</title>
-<meta property='og:title' content='notes' />
+<title>notes: ghidra hidpi</title>
+<meta property='og:title' content='ghidra hidpi' />
 <meta property='og:type' content='website' />
-<meta property='og:description' content='Assorted notes and research.' />
+<meta property='og:description' content='Making Ghidra scale on HiDPI screens.' />
 <meta property='og:site_name' content='notes' />
-<meta property='og:url' content='https://notes.zachmanson.com//notes.html' />
+<meta property='og:url' content='https://notes.zachmanson.com//ghidra_hidpi.html' />
 </head>
 <body>
 <nav>
 <a href='index.html'><img src='/media/icon/icon.png' alt='notes' height='100' /></a>
 <ul>
-<li><a href='projects.html'>projects</a></li>
-<li><a href='notes.html' class="active">notes</a></li>
-<li><a href='archive.html'>archive</a></li>
-<li><a href='about.html'>about</a></li>
-<li><a href='journal.html'>journal</a></li>
+<li><a href='folklore.html'>folklore</a></li>
+<li><a href='problems.html' class="active">problems</a></li>
 </ul>
 <ul>
-<li><a href='language.html'>language</a></li>
-<li><a href='generative_art.html'>generative art</a></li>
-<li><a href='miscellany.html'>miscellany</a></li>
+<li><a href='screentearing.html'>screentearing</a></li>
+<li><a href='keychron_fn_keys.html'>keychron fn keys</a></li>
+<li><a href='firefox_photon.html'>firefox photon</a></li>
+<li><a href='ghidra_hidpi.html' class="active">ghidra hidpi</a></li>
+</ul>
+<ul>
 </ul>
 </nav>
 <main>
-<h1>Assorted notes and research.</h1>
-<h2><a href='language.html'>language</a></h2>
-<sub>Notes on language and languages.</sub>
-<h2><a href='generative_art.html'>generative art</a></h2>
-<figure>
-<a href='media/headers/generative_art.png'>
-<img srcset='media/headers/generative_art-240.png 240w, media/headers/generative_art-680.png 680w, media/headers/generative_art-900.png 900w' sizes='(max-width: 480px) 240px, 680px' src='media/headers/generative_art-240.png' alt='' loading='lazy'>
-</a>
-<figcaption>Notes on generative art models.</figcaption>
-</figure>
-<h2><a href='miscellany.html'>miscellany</a></h2>
-<sub>Information yet to find a home.</sub>
-</main>
+<h1>Making Ghidra scale on HiDPI screens.</h1>
+<p>Tested on Kali Linux 5.18.0-kali5-amd64.</p>
+<p>Ghidra doesn't scale to HiDPI screens, but this can be fixed by modifying the <code>launch.properties</code> file.  This is located in <code><GhidraInstallDir>/support/launch.properties</code>, which when installed using apt is <code>/usr/share/ghidra/support/launch.properties</code>.</p>
+<p>Change this setting:</p>
+<pre>
+VMARGS_LINUX=-Dsun.java2d.uiScale=1
+</pre>
+<p>
+</p>
+<p>to:</p>
+<pre>
+VMARGS_LINUX=-Dsun.java2d.uiScale=2
+</pre>
+<h3>Links</h3><ul>
+<li><a href='https://gist.github.com/nstarke/baa031e0cab64a608c9bd77d73c50fc6' target='_blank'>Source</a></li>
+</ul></main>
 <footer>
 <img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Wed Sep 14 15:29:08 2022
 </em>
