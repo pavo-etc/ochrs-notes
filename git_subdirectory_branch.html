@@ -11,16 +11,16 @@
 <meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
 <meta name='theme-color' content='#282A36' />
 <meta charset='UTF-8'>
-<meta name='description' content='Making Ghidra scale on HiDPI screens.' />
+<meta name='description' content='Mounting a Git branch to a subdirectory' />
 <meta name='author' content='Zach Manson' />
 <meta name='viewport' content='width=device-width, initial-scale=1' />
 <link rel='stylesheet' type='text/css' href='links/main.css' />
-<title>notes: ghidra hidpi</title>
-<meta property='og:title' content='ghidra hidpi' />
+<title>notes: git subdirectory branch</title>
+<meta property='og:title' content='git subdirectory branch' />
 <meta property='og:type' content='website' />
-<meta property='og:description' content='Making Ghidra scale on HiDPI screens.' />
+<meta property='og:description' content='Mounting a Git branch to a subdirectory' />
 <meta property='og:site_name' content='notes' />
-<meta property='og:url' content='https://notes.zachmanson.com//ghidra_hidpi.html' />
+<meta property='og:url' content='https://notes.zachmanson.com//git_subdirectory_branch.html' />
 </head>
 <body>
 <nav>
@@ -33,26 +33,31 @@
 <li><a href='screentearing.html'>screentearing</a></li>
 <li><a href='keychron_fn_keys.html'>keychron fn keys</a></li>
 <li><a href='firefox_photon.html'>firefox photon</a></li>
-<li><a href='ghidra_hidpi.html' class="active">ghidra hidpi</a></li>
-<li><a href='git_subdirectory_branch.html'>git subdirectory branch</a></li>
+<li><a href='ghidra_hidpi.html'>ghidra hidpi</a></li>
+<li><a href='git_subdirectory_branch.html' class="active">git subdirectory branch</a></li>
 </ul>
 <ul>
 </ul>
 </nav>
 <main>
-<h1>Making Ghidra scale on HiDPI screens.</h1>
-<p>Tested on Kali Linux 5.18.0-kali5-amd64, Ghidra 10.1.4, Java 11.0.16.</p>
-<p>Ghidra doesn't scale to HiDPI screens, but this can be fixed by modifying the <code>launch.properties</code> file.  This is located in <code><GhidraInstallDir>/support/launch.properties</code>, which when installed using apt is <code>/usr/share/ghidra/support/launch.properties</code>.</p>
-<p>Change this setting:</p>
+<h1>Mounting a Git branch to a subdirectory</h1>
+<p>Create an orphaned branch if it doesn't already exist, and remove any shared history with the trunk.</p>
 <pre>
-VMARGS_LINUX=-Dsun.java2d.uiScale=1
+git checkout --orphan gh-pages
+git reset --hard
+git commit --allow-empty -m "Init"
+git checkout master
 </pre>
-<p>to:</p>
+<p>Make the subdirectory that will host the branch.</p>
 <pre>
-VMARGS_LINUX=-Dsun.java2d.uiScale=2
+mkdir site
+git worktree add site gh-pages
 </pre>
+<p>Moving in and out of this directory should now switch branches.</p>
+<p>To set up a subdirectory branch on a cloned Git repo, only run the last two commands.</p>
+<p>This site uses this set up for deploying to GitHub Pages.</p>
 <h3>Links</h3><ul>
-<li><a href='https://gist.github.com/nstarke/baa031e0cab64a608c9bd77d73c50fc6' target='_blank'>Source</a></li>
+<li><a href='http://sangsoonam.github.io/2019/02/08/using-git-worktree-to-deploy-github-pages.html' target='_blank'>Source</a></li>
 </ul></main>
 <footer>
 <img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Sun Sep 18 23:21:49 2022
