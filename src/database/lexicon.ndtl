@@ -329,7 +329,7 @@ GHIDRA HIDPI
 
 GIT SUBDIRECTORY BRANCH
 	HOST : problems
-	BREF : Mounting a Git branch to a subdirectory
+	BREF : Mounting a Git branch to a subdirectory.
 	BODY
 		Create an orphaned branch if it doesn't already exist, and remove any shared history with the trunk.
 		```
