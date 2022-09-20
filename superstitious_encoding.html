@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel='apple-touch-icon' sizes='180x180' href='/media/icon/apple-touch-icon.png'/>
+<link rel='icon' type='image/png' sizes='32x32' href='/media/icon/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/media/icon/favicon-16x16.png' />
+<link rel='manifest' href='/media/icon/site.webmanifest' />
+<link rel='mask-icon' href='/media/icon/safari-pinned-tab.svg' color='#bd93f9' />
+<link rel='shortcut icon' href='/media/icon/favicon.ico' />
+<meta name='msapplication-TileColor' content='#603cba' />
+<meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
+<meta name='theme-color' content='#282A36' />
+<meta charset='UTF-8'>
+<meta name='description' content='The tribulations of obscure character encoding.' />
+<meta name='author' content='Zach Manson' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='stylesheet' type='text/css' href='links/main.css' />
+<title>notes: superstitious encoding</title>
+<meta property='og:title' content='superstitious encoding' />
+<meta property='og:type' content='website' />
+<meta property='og:description' content='The tribulations of obscure character encoding.' />
+<meta property='og:site_name' content='notes' />
+<meta property='og:url' content='https://notes.zachmanson.com//superstitious_encoding.html' />
+</head>
+<body>
+<nav>
+<a href='index.html'><img src='/media/icon/icon.png' alt='notes' height='100' /></a>
+<ul>
+<li><a href='folklore.html' class="active">folklore</a></li>
+<li><a href='problems.html'>problems</a></li>
+</ul>
+<ul>
+<li><a href='500_miles.html'>500 miles</a></li>
+<li><a href='superstitious_encoding.html' class="active">superstitious encoding</a></li>
+</ul>
+<ul>
+</ul>
+</nav>
+<main>
+<h1>The tribulations of obscure character encoding.</h1>
+<p>The following is taken from a comment on HN written by user jake_morrison on 2022-07-14.</p>
+<article>
+<p>In the 90s I worked on a project to digitize land registration in Taiwan.
+<br>
+<br>In order to record deeds and property transfers, we needed to enter people's names and official registered addresses into the computer system. The problem was that some people used non-traditional writing variants for their names, and some of their birthplaces were tiny places in China with weird names.
+<br>
+<br>Someone might write their name with a two-dot water radical instead of three-dot radical. We would print it out in the normal font, and the people would lose their minds, saying that it was wrong. Chinese people can be superstitious about the number of strokes in their name, so adding a stroke might make it unlucky, so they would not buy the property.
+<br>
+<br>The customer went to the agency responsible for managing the big character set, https://en.wikipedia.org/wiki/CNS_11643 Despite having more characters than anything else on earth, it didn't have those variants. The agency said they would not encode them, because they were not real characters, just printing differences.
+<br>
+<br>The solution was for the staff in the office to use a "font maker" program to create a custom font with these characters. Then they could print out the deeds using a Chinese variant of Adobe Acrobat, and everyone was happy. </p>
+</article>
+<h3>Links</h3><ul>
+<li><a href='https://news.ycombinator.com/item?id=32096553' target='_blank'>Source</a></li>
+</ul></main>
+<footer>
+<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Tue Sep 20 11:31:19 2022
+</em>
+<hr />
+<section>
+<p>Made ineffeciently by <a href='https://zachmanson.com'>Zach Manson</a></p>
+</section>
+</footer>
+</body>
+</html>
