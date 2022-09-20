@@ -425,6 +425,25 @@ STABLE DIFFUSION
 	LINKS
 		Original prompt cheatsheet : https://moritz.pm/posts/parameters
 
+OUTPUTS
+	HOST : generative_art
+	BREF : Miscellaneous images generated with machine learning models.
+	BODY
+		"a pencil sketch of a computer terminal from 1983"
+		Generated using Stable Diffusion (Model 1.4)
+		{^img genart/computer1983-00004}
+		{^img genart/computer1983-00005}
+		{^img genart/computer1983-00015}
+		{^img genart/computer1983-00016}
+
+		"teenage girl with a red and white mushroom growing out of her head in the style of studio ghibli, anime"
+		Generated using Stable Diffusion (Model 1.4)
+		{^img genart/mushroom-girl-00001}
+		{^img genart/mushroom-girl-00002}
+		{^img genart/mushroom-girl-00004}
+		{^img genart/mushroom-girl-00007}
+		{^img genart/mushroom-girl-00019}
+
 MISCELLANY
 	HOST : notes
 	BREF : Information yet to find a home.
