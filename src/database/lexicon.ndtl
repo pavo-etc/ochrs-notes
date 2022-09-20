@@ -216,6 +216,15 @@ PROBLEMS
 		Source : http://www.ibiblio.org/harris/500milemail.html
 		Harris' FAQ : http://www.ibiblio.org/harris/500milemail-faq.html
 
+SUPERSTITIOUS ENCODING
+	HOST : folklore
+	BREF : The tribulations of obscure character encoding.
+	BODY
+		The following is taken from a comment on HN written by user jake_morrison on 2022-07-14.
+		{^text superstitious_encoding}
+	LINKS
+		Source : https://news.ycombinator.com/item?id=32096553
+
 SCREENTEARING
 	HOST : problems
 	BREF : Fixing screentearing on Xfce.
