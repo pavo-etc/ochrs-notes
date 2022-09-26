@@ -231,6 +231,13 @@ footer section a:hover img {
   background-color: white;
 }
 
+h2 + figure img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 382px;
+  object-fit: cover;
+}
+
 .bold {
   font-weight: bold;
 }
