@@ -238,6 +238,15 @@ SUPERSTITIOUS ENCODING
 	LINKS
 		Source : https://news.ycombinator.com/item?id=32096553
 
+ALIENS AND CALENDARS
+	HOST : folklore
+	BREF : 	Someday aliens will land and all will be fine until we explain our calendar
+	BODY
+		The following was written by Foone, posted to Twitter on 2022-09-21.
+		{^text aliens_and_calendars}
+	LINKS
+		Source : https://twitter.com/foone/status/1572260363764400129
+
 SCREENTEARING
 	HOST : problems
 	BREF : Fixing screentearing on Xfce.
@@ -466,6 +475,10 @@ OUTPUTS
 		{^img genart/mushroom-girl-00004}
 		{^img genart/mushroom-girl-00007}
 		{^img genart/mushroom-girl-00019}
+
+		"a seahorse on a desk the style of katsushika hokusai"
+		Generated using Stable Diffusion (Model 1.4)
+		{^img genart/seahorse}
 
 		"some soldiers with a gun on the battlefield"
 		Generated using Midjourney on 2022-08-05
