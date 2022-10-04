@@ -402,6 +402,7 @@ LANGUAGE
 		+ *Midding* (DoOS) - feeling the tranquil pleasure of being near a gathering but not quite in it—hovering on the perimeter of a campfire, chatting outside a party while others dance inside, resting your head in the backseat of a car listening to your friends chatting up front—feeling blissfully invisible yet still fully included, safe in the knowledge that everyone is together and everyone is okay, with all the thrill of being there without the burden of having to be.
 		+ *Mojibake* (Japanese) - garbled characters
 		+ *Moment of Tangency* (DoOS) - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
+		+ *Onomastic* (English from French onomastique) - of or belonging to naming
 		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
 		+ *Petrichor* (English) - A pleasant, distinctive smell frequently accompanying the first rain after a long period of warm, dry weather in certain regions
 		+ *Phaneron* (English-ish) - the collective total of all that is in any way or in any sense present to the mind, quite regardless of whether it corresponds to any real thing or not
@@ -521,6 +522,16 @@ OUTPUTS
 MISCELLANY
 	HOST : notes
 	BREF : Information yet to find a home.
+
+ANTECEDENTS
+	HOST : miscellany
+	BREF : Unexpected or noteworthy origins.
+	BODY
+		## Em Size
+
+		Em size is a unit defined by the height of characters.  It is used in font sizing in typography, and consequently is used in web development.  The origin of the name "em" is from metal type printing, where the "m" character type happened to be a square.  While in the past this was a physical property of the "m" type, in modern design contexts it is an arbitrary size representing the "design space" of a digital font.  This means the actual height of text in pixels can vary between fonts, despite having the same em size.
+
+		More on this can be read <a href="https://tonsky.me/blog/font-size/">here</a>.
 
 MISTAKES
 	HOST : miscellany
