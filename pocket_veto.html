@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<link rel='apple-touch-icon' sizes='180x180' href='/media/icon/apple-touch-icon.png'/>
+<link rel='icon' type='image/png' sizes='32x32' href='/media/icon/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/media/icon/favicon-16x16.png' />
+<link rel='manifest' href='/media/icon/site.webmanifest' />
+<link rel='mask-icon' href='/media/icon/safari-pinned-tab.svg' color='#bd93f9' />
+<link rel='shortcut icon' href='/media/icon/favicon.ico' />
+<meta name='msapplication-TileColor' content='#603cba' />
+<meta name='msapplication-config' content='/media/icon/browserconfig.xml' />
+<meta name='theme-color' content='#282A36' />
+<meta charset='UTF-8'>
+<meta name='description' content='Ethical dilemmas during desperate times at Twitter.' />
+<meta name='author' content='Zach Manson' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='stylesheet' type='text/css' href='links/main.css' />
+<title>notes: pocket veto</title>
+<meta property='og:title' content='pocket veto' />
+<meta property='og:type' content='website' />
+<meta property='og:description' content='Ethical dilemmas during desperate times at Twitter.' />
+<meta property='og:site_name' content='notes' />
+<meta property='og:url' content='https://notes.zachmanson.com//pocket_veto.html' />
+</head>
+<body>
+<nav>
+<a href='index.html'><img src='/media/icon/icon.png' alt='notes' height='100' /></a>
+<ul>
+<li><a href='folklore.html' class="active">folklore</a></li>
+<li><a href='problems.html'>problems</a></li>
+</ul>
+<ul>
+<li><a href='500_miles.html'>500 miles</a></li>
+<li><a href='superstitious_encoding.html'>superstitious encoding</a></li>
+<li><a href='aliens_and_calendars.html'>aliens and calendars</a></li>
+<li><a href='worse_is_better.html'>worse is better</a></li>
+<li><a href='pocket_veto.html' class="active">pocket veto</a></li>
+</ul>
+<ul>
+</ul>
+</nav>
+<main>
+<h1>Ethical dilemmas during desperate times at Twitter.</h1>
+<p>The following was written by Steve Krenzel, posted to Twitter on 2022-11-08.</p>
+<article>
+<p> With Twitter's change in ownership last week, I'm probably in the clear to talk about the most unethical thing I was asked to build while working at Twitter.
+<br>
+<br>To set the stage, this was the 2015-2016 era. @dickc was just ousted, though he was wonderful and made us feel like family. @jack came in as part-time CEO. Twitter had been near death for a while and was desperately trying to find a buyer. Facebook and Google both refused.
+<br>Most people don't really appreciate how close Twitter was to shutting down. The 2016 election was the only thing that saved them and made them relevant again (to the detriment of us all). But I digress...
+<br>I worked as a software engineer on a team with a charter to make Twitter work better for people in emerging markets (Brazil, India, Nigeria, etc...). This meant a lot of mobile work. And was mostly non-visual stuff - reducing bandwidth, memory usage, battery consumption.
+<br>Oh and app size... we fought tooth and nail to keep the app under 10MB. FB had the money to zero-rate for people in India to d/l a 100MB app, but we did not. We finally lost the 10MB battle when Twitter Video launched (iirc). After that, all discipline around app size was lost.
+<br>One of the first areas I worked on was improving the way our mobile apps uploaded logs. Twitter, like most mobile apps, logs *everything* users do – every swipe, tap, edit, delay, etc… – for debugging, metrics, and experiments.
+<br>
+<br>The size of logs adds up quickly.
+<br>In the app, HTTP responses were compressed, but requests weren't. Logs are highly compressible, so I wired up support to gzip HTTP requests, and tweaked our log ingestion server to handle these.
+<br>
+<br>(That reduced mobile bandwidth consumption by ~40% iirc. It was absurd.)
+<br>So I became known as the mobile logs guy. And that sets the stage for why I was pulled into a Sales conversation. Twitter was on its death bed and was desperate for money. A large telco wanted to pay us to log signal strength data in N. America and send it to them.
+<br>My plan was to aggregate signal strength by carrier / by location. I worked with Data Science to find a granularity – minimum area size and minimum distinct users per area – that would preserve anonymity even when combined with other sources of data (differential privacy).
+<br>When we sent this data to the telco they said the data was useless. They switched their request and said they want to be able to tell how many of our users are entering their competitors’ stores.
+<br>
+<br>A bit sketchier, but maybe workable in a privacy respecting way?
+<br>We ran an alternative by the telco. They didn’t like it and were frustrated. So was Sales. I was asked to go to telco’s HQ and figure out exactly what they want.
+<br>
+<br>The subsequent request was absurd.
+<br>I wound up meeting with a Director who came in huffing and puffing.
+<br>
+<br>The Director said “We should know when users leave their house, their commute to work, and everywhere they go throughout the day. Anything less is useless. We get a lot more than that from other tech companies.”
+<br>I responded with some variant of “No fucking way”.
+<br>
+<br>There was no universe where I was going to help sell granular identifiable user location data.
+<br>
+<br>This led to more internal meetings. Legal said the request was fine – none of it violated the user ToS.
+<br>Normally they might find another engineer to do this work, but my whole team was aligned with the privacy concerns. Twitter had also just done layoffs (aside: time is a flat circle), so there were no spare engineers around.
+<br>My team wasn’t touched by layoffs, but half of them had quit anyway. Twitter was having a mass exodus.
+<br>
+<br>I had done what I could, but Twitter was no longer a place to do good work. I decided to join the exodus and would pull any levers to kill this on my way out.
+<br>One random anecdote:
+<br>
+<br>In the middle of this, I had gotten a new manager who, in a retention attempt I’ll never forget, said “If we filled a dump truck with money and dumped it on you, would you stay and build this?”
+<br>
+<br>I wasn’t really sure how to respond to that… but no dice.
+<br>My last email written at Twitter was to Jack. To his credit, he responded quickly with something to the effect of “Let me look into that and make sure there isn’t a misunderstanding. It doesn’t seem right. We wouldn’t want to do that.”
+<br>
+<br>It was in his hands now.
+<br>As far as I know, the project actually got canned. Jack genuinely didn’t like it.
+<br>
+<br>I don’t know if this mindset will hold true with the new owner of Twitter though. I would assume Elon will do far worse things with the data.
+<br>And, for the any employees still at Twitter, don’t underestimate the power of a pocket veto.
+<br>
+<br>Sometimes it doesn’t work out, or you have to escalate and risk it back firing, but a good pocket veto is a tool to learn to wield well. </p>
+</article>
+<h3>Links</h3><ul>
+<li><a href='https://twitter.com/stevekrenzel/status/1589700721121058817' target='_blank'>Source</a></li>
+</ul></main>
+<footer>
+<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Wed Nov  9 11:19:11 2022
+</em>
+<hr />
+<section>
+<p>Made ineffeciently by <a href='https://zachmanson.com'>Zach Manson</a></p>
+</section>
+</footer>
+</body>
+</html>
