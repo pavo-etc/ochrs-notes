@@ -219,6 +219,12 @@ PROBLEMS
 	BODY
 		This is a collection of solutions I have found to problems deep in internet rabbitholes.  I fear they will die to link rot eventually, so I archive them here.
 
+LINES
+	HOST : archive
+	BREF : For things too small to warrant their own page.
+	BODY
+		{^text lines}
+
 500 MILES
 	HOST : folklore
 	BREF : The case of the 500-mile email
