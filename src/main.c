@@ -62,22 +62,22 @@ int   cial(char c) { return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'); }/
 int   cinu(char c) { return c >= '0' && c <= '9'; } /* char is num */
 int   clca(int c) { return c >= 'A' && c <= 'Z' ? c + ('a' - 'A') : c; } /* char to lowercase */
 int   cuca(char c) { return c >= 'a' && c <= 'z' ? c - ('a' - 'A') : c; } /* char to uppercase */
-int   spad(char *s, char c) { int i = 0; while(s[i] && s[i] == c && s[++i]) { ; } return i; } /* string count padding */
-int   slen(char *s) { int i = 0; while(s[i] && s[++i]) { ; } return i; } /* string length */
-char *suca(char *s) { int i = 0; char c; while((c = s[i])) s[i++] = cuca(c);return s; } /* string to uppercase */
-char *slca(char *s) { int i = 0; char c; while((c = s[i])) { s[i++] = clca(c); } return s; } /* string to lowercase */
-int   scmp(char *a, char *b) { int i = 0; while(a[i] == b[i]) if(!a[i++]) return 1; return 0; } /* string compare */
-char *scpy(char *src, char *dst, int len) { int i = 0; while((dst[i] = src[i]) && i < len - 2) i++; dst[i + 1] = '\0'; return dst; } /* string copy */
-int   sint(char *s, int len) { int n = 0, i = 0; while(s[i] && i < len && (s[i] >= '0' && s[i] <= '9')) n = n * 10 + (s[i++] - '0'); return n; } /* string to num */
-char *scsw(char *s, char a, char b) { int i = 0; char c; while((c = s[i])) s[i++] = c == a ? b : c; return s; } /* string char swap */
-int   sian(char *s) { int i = 0; char c; while((c = s[i++])) if(!cial(c) && !cinu(c) && !cisp(c)) return 0; return 1; } /* string is alphanum */
-int   scin(char *s, char c) { int i = 0; while(s[i]) if(s[i++] == c) return i - 1; return -1; } /* string char index */
-int   ssin(char *s, char *ss) { int a = 0, b = 0; while(s[a]) { if(s[a] == ss[b]) { if(!ss[b + 1]) return a - b; b++; } else b = 0; a++; } return -1; } /* string substring index */
-char *strm(char *s) { char *end; while(cisp(*s)) s++; if(*s == 0) return s; end = s + slen(s) - 1; while(end > s && cisp(*end)) end--; end[1] = '\0'; return s; }
+int   spad(char *s, char c) { int i = 0; while (s[i] && s[i] == c && s[++i]) { ; } return i; } /* string count padding */
+int   slen(char *s) { int i = 0; while (s[i] && s[++i]) { ; } return i; } /* string length */
+char *suca(char *s) { int i = 0; char c; while ((c = s[i])) s[i++] = cuca(c);return s; } /* string to uppercase */
+char *slca(char *s) { int i = 0; char c; while ((c = s[i])) { s[i++] = clca(c); } return s; } /* string to lowercase */
+int   scmp(char *a, char *b) { int i = 0; while (a[i] == b[i]) if (!a[i++]) return 1; return 0; } /* string compare */
+char *scpy(char *src, char *dst, int len) { int i = 0; while ((dst[i] = src[i]) && i < len - 2) i++; dst[i + 1] = '\0'; return dst; } /* string copy */
+int   sint(char *s, int len) { int n = 0, i = 0; while (s[i] && i < len && (s[i] >= '0' && s[i] <= '9')) n = n * 10 + (s[i++] - '0'); return n; } /* string to num */
+char *scsw(char *s, char a, char b) { int i = 0; char c; while ((c = s[i])) s[i++] = c == a ? b : c; return s; } /* string char swap */
+int   sian(char *s) { int i = 0; char c; while ((c = s[i++])) if (!cial(c) && !cinu(c) && !cisp(c)) return 0; return 1; } /* string is alphanum */
+int   scin(char *s, char c) { int i = 0; while (s[i]) if (s[i++] == c) return i - 1; return -1; } /* string char index */
+int   ssin(char *s, char *ss) { int a = 0, b = 0; while (s[a]) { if (s[a] == ss[b]) { if (!ss[b + 1]) return a - b; b++; } else b = 0; a++; } return -1; } /* string substring index */
+char *strm(char *s) { char *end; while (cisp(*s)) s++; if (*s == 0) return s; end = s + slen(s) - 1; while (end > s && cisp(*end)) end--; end[1] = '\0'; return s; }
 int   surl(char *s) { return ssin(s, "://") >= 0 || ssin(s, "../") >= 0; } /* string is url */
 char *sstr(char *src, char *dst, int from, int to) { int i; char *a = (char *)src + from, *b = (char *)dst; for(i = 0; i < to; i++) b[i] = a[i]; dst[to] = '\0'; return dst; }
 char *ccat(char *dst, char c) { int len = slen(dst); dst[len] = c; dst[len + 1] = '\0'; return dst; }
-char *scat(char *dst, const char *src) { char *ptr = dst + slen(dst); while(*src) { *ptr++ = *src++; } *ptr = '\0'; return dst; }
+char *scat(char *dst, const char *src) { char *ptr = dst + slen(dst); while (*src) { *ptr++ = *src++; } *ptr = '\0'; return dst; }
 /* clang-format on */
 
 #pragma mark - Core
@@ -354,7 +354,7 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 
 	img = getfile(fakepath, name, ext, "r");
 	if(!img) {
-		// if(!header && link)
+		// if (!header && link)
 
 		// try png just for the hell of it
 		ext[0] = '\0';
@@ -420,6 +420,7 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 	return 1;
 }
 
+/* Include the contents of a file in inc/ */
 int
 fpinclude(FILE *f, char *file, int type)
 {
@@ -450,10 +451,12 @@ fpinclude(FILE *f, char *file, int type)
 	fp = getfile(path, file, ext, "r");
 	if(!fp)
 		return error("Missing include", fullpath);
+
 	if(type == 1)
 		fputs("<article>\n<p>", f);
 	else if(type == 2)
 		fputs("<pre>\n", f);
+
 	while((c = fgetc(fp)) != EOF) {
 		if(type || type == 2) {
 			if(c == '<')
@@ -464,14 +467,17 @@ fpinclude(FILE *f, char *file, int type)
 				fputs("&amp;", f);
 			else
 				fputc(c, f);
-		} else
+		} else {
 			fputc(c, f);
+		}
+
 		if(c == '\n') {
 			if(type == 1)
 				fputs("<br>", f);
 			lines++;
 		}
 	}
+
 	fclose(fp);
 	if(type == 1)
 		fputs("</p>\n</article>\n", f);
@@ -503,6 +509,7 @@ fptable(FILE *f, char *target)
 	return 1;
 }
 
+/* What the fuck is this */
 int
 fpmarbles(FILE *f, char *target)
 {
@@ -597,6 +604,7 @@ fptemplate(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s, int code)
 	}
 }
 
+/* Process markdown tags, convert them into html */
 void
 fptag(FILE *f, Glossary *glo, Lexicon *lex, Term *t, char *s)
 {
