@@ -264,6 +264,15 @@ POCKET VETO
 	LINKS
 		Source : https://twitter.com/stevekrenzel/status/1589700721121058817
 
+SRE THREATS
+	HOST : folklore
+	BREF : Things to fear when running a social media platform.
+	BODY
+		The following was written by Mosquito Capital, posted to Twitter on 2022-11-18.
+		{^text sre_threats}
+	LINKS
+		Source : https://twitter.com/MosquitoCapital/status/1593541177965678592
+
 SCREENTEARING
 	HOST : problems
 	BREF : Fixing screentearing on Xfce.
