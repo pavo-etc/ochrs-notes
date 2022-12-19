@@ -609,6 +609,14 @@ MISTAKES
 
 		More details on this can be read <a href="https://web.archive.org/web/20180827160401/https://plus.google.com/+RobPikeTheHuman/posts/R58WgWwN9jp">here</a>.
 
+CRAWFORD PRINCIPLES
+	HOST : miscellany
+	BREF : The Crawford Principles
+	BODY
+		Taken from <a href="https://jbcrawford.us/notes/principles">, as written (and titled) by J. B. Crawford.
+
+		{^html crawford_principles}
+
 404
 	HOST : index
 	BREF : Halting
