@@ -322,7 +322,7 @@ fplist(FILE *f, Glossary *glo, char *target)
 }
 // m1
 int
-fppict(FILE *f, char *filename, char *caption, int header, int link)
+fppict(FILE *f, char *filename, char *caption, int header, int link, char *headerlink)
 {
 	FILE *img;
 	char path[64], name[64], ext[16], dst[16], buf[32], srcset[256];
@@ -354,8 +354,6 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 
 	img = getfile(fakepath, name, ext, "r");
 	if(!img) {
-		// if (!header && link)
-
 		// try png just for the hell of it
 		ext[0] = '\0';
 		scat(ext, ".png");
@@ -406,7 +404,11 @@ fppict(FILE *f, char *filename, char *caption, int header, int link)
 		fprintf(f, "<video autoplay loop src='%s%s%s' type='video/mp4'></video>\n", path, name, ext);
 	else {
 		if(count > 1) {
-			fprintf(f, "<a href='%s%s%s'>\n", path, name, ext);
+			if(headerlink) {
+				fprintf(f, "<a href='%s.html'>\n", headerlink);
+			} else {
+				fprintf(f, "<a href='%s%s%s'>\n", path, name, ext);
+			}
 			fprintf(f, "<img srcset='%s' sizes='(max-width: 480px) 240px, 680px' src='%s%s-240.png' alt='' loading='lazy'>\n", srcset, path, name);
 			fputs("</a>\n", f);
 		} else
@@ -557,11 +559,11 @@ fpmodule(FILE *f, Glossary *glo, char *s)
 			sstr(target, caption, split2 + 1, slen(target) - split2);
 			int split3 = scin(filename, '.');
 			filename[split3] = '\0';
-			fppict(f, filename, caption, 0, 1);
+			fppict(f, filename, caption, 0, 1, NULL);
 		} else {
 			int split3 = scin(target, '.');
 			target[split3] = '\0';
-			fppict(f, target, NULL, 0, 1);
+			fppict(f, target, NULL, 0, 1, NULL);
 		}
 	} else if(scmp(cmd, "marbles")) {
 		fpmarbles(f, target);
@@ -807,7 +809,7 @@ fpportal(FILE *f, Glossary *glo, Lexicon *lex, Term *t, int text, int img)
 			imgpath[0] = '\0';
 			scat(imgpath, "headers/");
 			scat(imgpath, tc->filename);
-			fppict(f, imgpath, caption, 0, 0);
+			fppict(f, imgpath, caption, 0, 0, tc->filename);
 		} else
 			fprintf(f, "<sub>%s</sub>\n", tc->bref);
 		if(text)
@@ -898,7 +900,7 @@ fpjournal(FILE *f, Journal *jou)
 			scat(capt, " - ");
 		}
 		scat(capt, l.name);
-		fppict(f, l.pict, capt, 0, 1);
+		fppict(f, l.pict, capt, 0, 1, NULL);
 	}
 }
 
@@ -991,7 +993,7 @@ fphtml(FILE *f, Glossary *glo, Lexicon *lex, Term *t, Journal *jou)
 	else if(t->caption)
 		scat(sub, t->caption);
 	// printf("imgpath %s\n", imgpath);
-	fppict(f, imgpath, sub, 1, 0);
+	fppict(f, imgpath, sub, 1, 0, NULL);
 	fputs("<main>\n", f);
 	fpbody(f, glo, lex, t);
 	if(t->type) {
