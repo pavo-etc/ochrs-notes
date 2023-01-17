@@ -429,6 +429,7 @@ LANGUAGE
 		+ *Midding* (DoOS) - feeling the tranquil pleasure of being near a gathering but not quite in it—hovering on the perimeter of a campfire, chatting outside a party while others dance inside, resting your head in the backseat of a car listening to your friends chatting up front—feeling blissfully invisible yet still fully included, safe in the knowledge that everyone is together and everyone is okay, with all the thrill of being there without the burden of having to be.
 		+ *Mojibake* (Japanese) - garbled characters
 		+ *Moment of Tangency* (DoOS) - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
+		+ *Obviate* - remove a difficulty
 		+ *Onomastic* (English from French onomastique) - of or belonging to naming
 		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
 		+ *Patois* (French) - A regional dialect of a language (especially French); usually considered substandard
@@ -444,6 +445,7 @@ LANGUAGE
 		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
 		+ *Watashiato* (DoOS) - curiosity about the impact you’ve had on the lives of the people you know, wondering which of your harmless actions or long-forgotten words might have altered the plot of their stories in ways you’ll never get to see.
 		+ *Weltschmerz* (German) - A feeling of sentimental sadness or pessimism; the weariness that comes with knowing that the world is going to let you down no matter what and there’s nothing you can do to stop it
+		+ *Wonderlanding* - falling down rabbitholes
 		+ *Yuenyeung* (Cantonese) - coffee with tea
 	LINKS
 		Dictionary of Obscure Sorrows : https://www.dictionaryofobscuresorrows.com/
@@ -612,6 +614,13 @@ CRAWFORD PRINCIPLES
 		As written (and titled) by J. B. Crawford <a href="https://jbcrawford.us/notes/principles">here</a>.
 
 		{^html crawford_principles}
+CAB RIDE
+	HOST : FOLKLORE
+	BREF : The Cab Ride I'll Never Forget
+	BODY
+		As written by Ken Nerburn <a href="https://kentnerburn.com/the-cab-ride-ill-never-forget">here</a>.
+
+		{^text cab_ride}
 
 404
 	HOST : index
