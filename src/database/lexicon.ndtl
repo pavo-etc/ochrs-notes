@@ -27,15 +27,6 @@ ABOUT
 	BODY
 		This {meta website} is a vaguely organised collection of notes.  A full sitemap can be found {404 here}.
 
-JOURNAL
-	HOST : index
-	BREF : Sporadically updated.
-
-DEVELOPMENT
-	HOST : projects
-	TYPE : img_portal
-	BREF : Notes on software projects I have created or contributed to.
-
 META
 	HOST : about
 	BREF : About this website.
@@ -159,7 +150,7 @@ STYLESHEET
 		Library Genesis : https://libgen.is/
 
 SNAKEWARE
-	HOST : development
+	HOST : projects
 	BREF : A Linux-based operating system with a pure Python userspace.
 	BODY
 		snakeware is an experimental OS with developed in 2020.  Its userspace is written entirely in Python, barring a single Busybox root process.  It was created by Joshua Moore drawing inspiration from the Commodore 64.  The window manager, snakewm, is written primarily with pygame_gui.  It is not based on X11 or Wayland, instead writing directly to the framebuffer (`/dev/fb0`).
@@ -189,7 +180,7 @@ SNAKEWARE
 		CATH text editor : https://github.com/Cyppa/CATH-for-Snakeware
 
 COVID19 TRACKER
-	HOST : development
+	HOST : projects
 	BREF : A dashboard for COVID-19 updates in Western Australia.
 	BODY
 		<a href="https://tracker.zachmanson.com">tracker.zachmanson.com</a> was written in early 2022 to serve as a simple dashboard to visualise the number of COVID-19 infections in Western Australia.  
@@ -428,6 +419,7 @@ LANGUAGE
 		DoOS refers to the <a href="https://www.dictionaryofobscuresorrows.com/">Dictionary of Obscure Sorrows</a>.
 
 		+ *Apricity* (English) - the warmth of the sun in winter
+		+ *Avuncular* - kind and friendly towards a younger or less experienced person.
 		+ *Complect* - intertwine, embrace especially; to plait together; interweave.
 		+ *Ichor* - God's equivalent for blood
 		+ *Interrobang* (Character) - ‽
@@ -439,12 +431,14 @@ LANGUAGE
 		+ *Moment of Tangency* (DoOS) - A glimpse of what might have been.  If two lines are truly parallel, it means they’ll never actually meet.
 		+ *Onomastic* (English from French onomastique) - of or belonging to naming
 		+ *Palimpsest* - something reused or altered but still bearing visible traces of its earlier form.
+		+ *Patois* (French) - A regional dialect of a language (especially French); usually considered substandard
 		+ *Petrichor* (English) - A pleasant, distinctive smell frequently accompanying the first rain after a long period of warm, dry weather in certain regions
 		+ *Phaneron* (English-ish) - the collective total of all that is in any way or in any sense present to the mind, quite regardless of whether it corresponds to any real thing or not
 		+ *Prosaically* (English) - in a straightforward, ordinary way
 		+ *Schadenfreude* (German) - enjoyment obtained from the troubles of others
 		+ *Setsunai* (Japanese) - nostalgic/whistful/longing/melancholy/sad/heartache/bittersweet
 		+ *Sonder* (DoOS) - the realization that each random passerby is living a life as vivid and complex as your own
+		+ *Therianthrope* - what lycanthrope pretends to mean; lycanthrope only refers to wolf transformations
 		+ *Tsundoku* (Japanses) - the stack(s) of books you’ve purchased but haven’t read
 		+ *Vellichor* (English) - the strange wistfulness of used bookstores
 		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
