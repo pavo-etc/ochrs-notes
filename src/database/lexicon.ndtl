@@ -444,6 +444,7 @@ LANGUAGE
 		+ *Schadenfreude* (German) - enjoyment obtained from the troubles of others
 		+ *Setsunai* (Japanese) - nostalgic/whistful/longing/melancholy/sad/heartache/bittersweet
 		+ *Sonder* (DoOS) - the realization that each random passerby is living a life as vivid and complex as your own
+		+ *Tsundoku* (Japanses) - the stack(s) of books you’ve purchased but haven’t read
 		+ *Vellichor* (English) - the strange wistfulness of used bookstores
 		+ *Vemödalen* (DoOS) - the frustration of photographing something amazing when thousands of identical photos already exist—the same sunset, the same waterfall, the same curve of a hip, the same closeup of an eye—which can turn a unique subject into something hollow and pulpy and cheap, like a mass-produced piece of furniture you happen to have assembled yourself
 		+ *Watashiato* (DoOS) - curiosity about the impact you’ve had on the lives of the people you know, wondering which of your harmless actions or long-forgotten words might have altered the plot of their stories in ways you’ll never get to see.
@@ -610,10 +611,10 @@ MISTAKES
 		More details on this can be read <a href="https://web.archive.org/web/20180827160401/https://plus.google.com/+RobPikeTheHuman/posts/R58WgWwN9jp">here</a>.
 
 CRAWFORD PRINCIPLES
-	HOST : miscellany
+	HOST : FOLKLORE
 	BREF : The Crawford Principles
 	BODY
-		Taken from <a href="https://jbcrawford.us/notes/principles">, as written (and titled) by J. B. Crawford.
+		As written (and titled) by J. B. Crawford <a href="https://jbcrawford.us/notes/principles">here</a>.
 
 		{^html crawford_principles}
 
