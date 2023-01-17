@@ -277,7 +277,8 @@ CHATGPT DEFENDS ITSELF
 	HOST : folklore
 	BREF : ChatGPT defends itself on HN
 	BODY
-		The following thread was posted on 2022-12-05
+		The following thread was posted on 2022-12-05.
+		{^text chatgpt}
 	LINKS
 		Source : https://news.ycombinator.com/item?id=33861284
 
