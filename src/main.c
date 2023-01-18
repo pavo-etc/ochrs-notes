@@ -7,6 +7,7 @@
 #define LOGMEM 4096 * 4
 #define ITEMS 64
 #define BODYLINES 128
+#define LINELEN 2048
 
 #define NAME "notes"
 #define DOMAIN "https://notes.zachmanson.com/"
@@ -1072,14 +1073,13 @@ fprss(FILE *f, Journal *jou)
 }
 
 #pragma mark - Parse
-
 int
 parse_glossary(FILE *fp, Block *block, Glossary *glo)
 {
 	int len, depth, count = 0, split = 0;
 	char line[512], buf[1024], subs[512];
 	List *l = &glo->lists[glo->len];
-	while(fgets(line, 512, fp)) {
+	while(fgets(line, LINELEN, fp)) {
 		depth = spad(line, '\t');
 		len = slen(strm(line));
 		count++;
@@ -1087,8 +1087,9 @@ parse_glossary(FILE *fp, Block *block, Glossary *glo)
 			continue;
 		if(glo->len >= GLOMEM)
 			return errorid("Increase memory", "glossary", glo->len);
-		if(len > 400)
+		if(len > LINELEN - 100) {
 			return errorid("Line is too long", line, len);
+		}
 		if(depth == 0)
 			l = makelist(&glo->lists[glo->len++], push(block, sstr(line, buf, 0, len)));
 		else if(depth == 1) {
@@ -1122,9 +1123,9 @@ int
 parse_lexicon(FILE *fp, Block *block, Lexicon *lex)
 {
 	int key_len, val_len, len, count = 0, catch_body = 0, catch_link = 0;
-	char line[1024], buf[1024];
+	char line[LINELEN], buf[LINELEN];
 	Term *t = &lex->terms[lex->len];
-	while(fgets(line, 1024, fp)) {
+	while(fgets(line, LINELEN, fp)) {
 		int depth = spad(line, '\t');
 		strm(line);
 		len = slen(line);
@@ -1133,7 +1134,7 @@ parse_lexicon(FILE *fp, Block *block, Lexicon *lex)
 			continue;
 		if(lex->len >= LEXMEM)
 			return errorid("Increase memory", "Lexicon", lex->len);
-		if(len > 750)
+		if(len > LINELEN - 100)
 			return errorid("Line is too long", line, len);
 		// printf("depth: %d len: %d\n",depth, len);
 		if(depth == 0) {
