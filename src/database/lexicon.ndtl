@@ -646,6 +646,13 @@ CAB RIDE
 
 		{^text cab_ride}
 
+DO THINGS TELL PEOPLE
+	HOST : folklore
+	BREF : Do things, tell people.
+	BODY
+		As written by Carl Lange <a href="http://carl.flax.ie/dothingstellpeople.html">here</a>.
+		{^text do_things}
+
 404
 	HOST : index
 	BREF : Halting
