@@ -34,6 +34,7 @@
 <ul>
 <li><a href='snakeware.html'>snakeware</a></li>
 <li><a href='covid19_tracker.html' class="active">covid19 tracker</a></li>
+<li><a href='alculator.html'>alculator</a></li>
 </ul>
 <ul>
 </ul>
@@ -50,12 +51,13 @@
 <h1>A dashboard for COVID-19 updates in Western Australia.</h1>
 <a href="https://tracker.zachmanson.com">tracker.zachmanson.com</a> was written in early 2022 to serve as a simple dashboard to visualise the number of COVID-19 infections in Western Australia.<p>It was borne of mild frustration on how difficult it was to find the number of locally spread cases that had been identified overnight, as opposed to imported cases.  During the first few months of WA's this distinction was critical to understanding how quickly the virus was spreading, thought wasn't present in the State Governments own dashboard.  They only reported this statistic on their daily(ish) press releases.</p>
 <p>My tracker scrapes these press releases, stores them, produces a simple plot of the case numbers and generates a static website based on the data.  The script is written in Python using Beautiful Soup to scrape the data, matplotlib to create plots and jinja for the templating.  This is run every 20 minutes and served using nginx.</p>
+<p>The project has been broken since September 2022, as the government switched to only reporting weekly numbers.`</p>
 <h3>Links</h3><ul>
 <li><a href='https://github.com/pavo-etc/wa-covid-tracker' target='_blank'>Source</a></li>
 <li><a href='https://tracker.zachmanson.com' target='_blank'>Deployment</a></li>
 </ul></main>
 <footer>
-<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Wed Jan 18 01:22:35 2023
+<img src='/media/icon/arrow_up.svg' /> <a href='#'>Back to top</a> | last edit: <em>Wed Jan 18 11:09:50 2023
 </em>
 <hr />
 <section>
