@@ -204,7 +204,7 @@ ALCULATOR
 
 		## Dan's API
 
-		Dan Murphy's website is a bloated Angular project but the public APIs used by the site have little to no security. After some mild poking around I was able to determine the routes needed and the general schema in use. Annoyingly, their APIs seemed designed around serving data that the frontend could display with almost little to no modification, rather than serving data in a logical format.
+		Dan Murphy's website is a bloated Angular project but the public APIs used by the site have little to no security. After some mild poking around I was able to determine the routes needed and the general schema in use. Annoyingly, their APIs seemed designed around serving data that the frontend could display with almost no modification, rather than serving data in a logical format.
 		
 		For example, for any given product, the site will send a JSON object.  This will contain 3 different prices for the product for the different pack sizes you can purchase them in.  These are labelled `caseprice`, `singleprice`, and `inanysixprice`. Case price, understably, represents the price of a case.  A case of Gage Roads Pipe Dreams Coastal Lager Bottles may have a caseprice of $31.55, but the only way to know how many bottles are in this case are in a field called `caseprice.Message`.  This is actually a string, that *usually* says something like "case (24)", when it should obviously just be an associated int called something like `caseprice.units`.
 		
